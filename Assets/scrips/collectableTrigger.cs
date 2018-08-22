@@ -16,13 +16,13 @@ public class collectableTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == tagName)
         {
-            vec.x = bonusPower/50;
+            vec.x = bonusPower*1.6f/50;
             
 
              leftWall.transform.position = leftWall.transform.position - vec;
              rightWall.transform.position = rightWall.transform.position + vec;
              vec.x = 0;
-             vec.y = bonusPower/50;
+             vec.y = bonusPower*0.9f/50;
              upWall.transform.position = upWall.transform.position - vec;
              downWall.transform.position = downWall.transform.position + vec;
             Destroy(this.gameObject);
