@@ -61,7 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scrips\collectablesSpawner.cs" />
     <Compile Include="Assets\scrips\collectableTrigger.cs" />
+    <Compile Include="Assets\scrips\colliderScaler.cs" />
+    <Compile Include="Assets\scrips\dataStorage.cs" />
     <Compile Include="Assets\scrips\loadSceneButton.cs" />
     <Compile Include="Assets\scrips\loadSceneTrigger.cs" />
     <Compile Include="Assets\scrips\movePlayer.cs" />
