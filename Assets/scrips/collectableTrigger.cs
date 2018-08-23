@@ -5,16 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class collectableTrigger : MonoBehaviour
 {
-    public string tagName;
-    public GameObject leftWall;
-    public GameObject rightWall;
-    public GameObject upWall;
-    public GameObject downWall;
+    public string wallsTagName;
+    public string playerTagName;
+    public GameObject frame;
+    GameObject leftWall;
+    GameObject rightWall;
+    GameObject upWall;
+    GameObject downWall;
     public float bonusPower;
     Vector3 vec;
+    private void Start()
+    {
+        leftWall = GameObject.Find("frame/left");
+        rightWall = GameObject.Find("frame/right");
+        upWall = GameObject.Find("frame/up");
+        downWall = GameObject.Find("frame/down");       
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == tagName)
+       if(collision.gameObject.tag == wallsTagName)
+        {
+            Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag == playerTagName)
         {
             vec.x = bonusPower*1.6f/50;
             
@@ -23,8 +37,8 @@ public class collectableTrigger : MonoBehaviour
              rightWall.transform.position = rightWall.transform.position + vec;
              vec.x = 0;
              vec.y = bonusPower*0.9f/50;
-             upWall.transform.position = upWall.transform.position - vec;
-             downWall.transform.position = downWall.transform.position + vec;
+             upWall.transform.position = upWall.transform.position + vec;
+             downWall.transform.position = downWall.transform.position - vec;
             Destroy(this.gameObject);
         }
     }

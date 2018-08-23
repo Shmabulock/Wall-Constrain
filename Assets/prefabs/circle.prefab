@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1301408252171574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.062152, y: 2.1288772, z: 0}
+  m_LocalPosition: {x: -19.465973, y: -5.7634826, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68,7 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067dd88a1e601e74690a5f6ae7ecda0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagName: Player
+  wallsTagName: Walls
+  playerTagName: Player
+  frame: {fileID: 1793527122602540, guid: f1ed5b7adfd771f4ba322321f9de58a1, type: 2}
+  bonusPower: 10
 --- !u!212 &212103538114442848
 SpriteRenderer:
   m_ObjectHideFlags: 1
