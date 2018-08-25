@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class dataStorage : MonoBehaviour {
     public int bonusConut;
+    public int getbonusCouunt()
+    {
+        return bonusConut;
+    }
 	
 }

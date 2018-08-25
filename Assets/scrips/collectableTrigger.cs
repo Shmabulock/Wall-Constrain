@@ -8,23 +8,26 @@ public class collectableTrigger : MonoBehaviour
     public string wallsTagName;
     public string playerTagName;
     public GameObject frame;
+    private collectablesSpawner collSpawner;
     GameObject leftWall;
     GameObject rightWall;
     GameObject upWall;
     GameObject downWall;
     public float bonusPower;
     Vector3 vec;
-    private void Start()
+   
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         leftWall = GameObject.Find("frame/left");
         rightWall = GameObject.Find("frame/right");
         upWall = GameObject.Find("frame/up");
-        downWall = GameObject.Find("frame/down");       
-    }
+        downWall = GameObject.Find("frame/down");
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-       if(collision.gameObject.tag == wallsTagName)
+        collSpawner = GameObject.FindObjectOfType<collectablesSpawner>();
+       // collSpawner = GameObject.FindObjectOfType<collectablesSpawner>();
+
+        if (collision.gameObject.tag == wallsTagName)
         {
             Destroy(this.gameObject);
         }
@@ -39,7 +42,14 @@ public class collectableTrigger : MonoBehaviour
              vec.y = bonusPower*0.9f/50;
              upWall.transform.position = upWall.transform.position + vec;
              downWall.transform.position = downWall.transform.position - vec;
-            Destroy(this.gameObject);
+
+             Destroy(this.gameObject);
         }
     }
+    private void OnDestroy()
+    {
+        if (collSpawner != null) 
+            collSpawner.GetComponent<collectablesSpawner>().bonusCount--;
+    }
 }
+
