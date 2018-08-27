@@ -49,7 +49,7 @@ public class collectableTrigger : MonoBehaviour
     private void OnDestroy()
     {
         if (collSpawner != null) 
-            collSpawner.GetComponent<collectablesSpawner>().bonusCount--;
+            collSpawner.GetComponent<collectablesSpawner>().setBonusCount(collSpawner.GetComponent<collectablesSpawner>().getBonusCount()-1);
     }
 }
 

@@ -8,9 +8,13 @@ public class wallMove : MonoBehaviour
     public Napr what;
     float x;
     float y;
+    float multiplier;
+    int counter;
     Vector3 moveVec;
     void Start()
     {
+        counter = 1;
+        multiplier = 1.0f;
      switch(what)
         {
             case Napr.left:
@@ -48,8 +52,15 @@ public class wallMove : MonoBehaviour
 
     void FixedUpdate()
     {
-            transform.position = transform.position + moveVec;
-        
+        moveVec.x = x * Speed * multiplier * Time.fixedDeltaTime;
+        moveVec.y = y * Speed * multiplier * Time.fixedDeltaTime;
+        transform.position = transform.position + moveVec;
+        counter++;
+        if(counter%1000 == 0)
+        {
+            counter = 1;
+            multiplier += 0.05f;
+        }
     }
 
     
