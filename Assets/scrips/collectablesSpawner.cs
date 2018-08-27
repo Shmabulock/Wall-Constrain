@@ -8,7 +8,7 @@ public class collectablesSpawner : MonoBehaviour
     public float delay;
     public GameObject bonus;
     public Camera mainCamera;
-    public int bonusCount;
+    private int bonusCount;
     private void Start()
     {
         bonusCount = 0;
@@ -18,6 +18,10 @@ public class collectablesSpawner : MonoBehaviour
     {
         Debug.Log(bonusCount);
         if(bonusCount < 1 && (Random.Range(0,1)%2)==0 )
+        {
+            addBonus(bonus);
+        }
+        if (bonusCount < 2 && (Random.Range(0, 9) % 10) == 0)
         {
             addBonus(bonus);
         }
@@ -44,5 +48,13 @@ public class collectablesSpawner : MonoBehaviour
                                                      mainCamera.transform.position.x + mainCamera.orthographicSize),
                                        Random.Range(mainCamera.transform.position.y - mainCamera.orthographicSize,
                                                      mainCamera.transform.position.y + mainCamera.orthographicSize)), Quaternion.identity);
+    }
+    public void setBonusCount(int Count)
+    {
+        bonusCount = Count;
+    }
+    public int getBonusCount()
+    {
+        return bonusCount;
     }
 }
