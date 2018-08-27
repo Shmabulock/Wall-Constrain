@@ -2,10 +2,12 @@ WindowsStandalone
 PlayerPath?
 F:/unity work/builded projects/game/game.exe
 SceneListBegin?
+Assets/scenes/mainMenu.unity
 Assets/scenes/gameplay.unity
 Assets/scenes/gameOver.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
+502f59d8f48165fdfbd03a652aa61254 Assembly-CSharp.dll:.timer
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
