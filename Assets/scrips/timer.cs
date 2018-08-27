@@ -23,7 +23,7 @@ public class timer : MonoBehaviour {
         if (Application.loadedLevelName == "gameOver")
         {
             TimerText = GameObject.Find("score").GetComponent<Text>();
-            TimerText.text = myTimer.ToString("F");
+            TimerText.text = "Your time is " + myTimer.ToString("F") + " seconds";
         }
 
     }
