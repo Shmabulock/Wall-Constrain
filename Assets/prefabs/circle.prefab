@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114600706079981936}
   - component: {fileID: 198166295819984630}
   - component: {fileID: 199729628975127538}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: circle
   m_TagString: collectable
   m_Icon: {fileID: 0}
