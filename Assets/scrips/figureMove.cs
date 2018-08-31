@@ -4,17 +4,23 @@ public class figureMove : MonoBehaviour
 {
     [Range(0.0f, 1.0f)]
     public float Speed = 1;
+
     [Range(-1.0f, 1.0f)]
     public float rotationSpeed;
+    ObstaclesSpawner spawner;
     public enum Napr { left, right, up, down };
     public Napr what;
+    public float destroyDelay;
     float x;
     float y;
     float multiplier;
     int counter;
     Vector3 moveVec;
+
     void Start()
     {
+        
+        spawner = GameObject.Find("obstaclesSpawner").GetComponent<ObstaclesSpawner>();
         counter = 1;
         multiplier = 1.0f;
         switch (what)
@@ -49,7 +55,7 @@ public class figureMove : MonoBehaviour
         moveVec.x = x * Speed * Time.fixedDeltaTime;
         moveVec.y = y * Speed * Time.fixedDeltaTime;
         moveVec.z = 0;
-
+        Destroy(this.gameObject, destroyDelay);
     }
 
     void FixedUpdate()
@@ -67,6 +73,19 @@ public class figureMove : MonoBehaviour
             multiplier += 0.05f;
         }
     }
+    public Napr GetNapr()
+    {
+        return what;
+    }
+    public void SetNapr(Napr n)
+    {
+        what = n;
+    }
+   private void OnDestroy()
+    {
 
-
+       // Debug.Log("hahahaha");
+        if(spawner != null)
+        spawner.GetComponent<ObstaclesSpawner>().setObstaclesCount(spawner.GetComponent<ObstaclesSpawner>().getObstaclesCount() - 1);
+    }
 }
