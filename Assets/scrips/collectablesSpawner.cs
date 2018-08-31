@@ -16,7 +16,7 @@ public class collectablesSpawner : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Debug.Log(bonusCount);
+       // Debug.Log(bonusCount);
         if(bonusCount < 1 && (Random.Range(0,1)%2)==0 )
         {
             addBonus(bonus);
