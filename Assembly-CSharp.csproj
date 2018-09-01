@@ -64,6 +64,9 @@
     <Compile Include="Assets\scrips\collectablesSpawner.cs" />
     <Compile Include="Assets\scrips\collectableTrigger.cs" />
     <Compile Include="Assets\scrips\figureMove.cs" />
+    <Compile Include="Assets\scrips\fullSpaceBonusSpawner.cs" />
+    <Compile Include="Assets\scrips\fullSpaceBonusTrigger.cs" />
+    <Compile Include="Assets\scrips\fullSpaceBonuTtrigger.cs" />
     <Compile Include="Assets\scrips\loadSceneButton.cs" />
     <Compile Include="Assets\scrips\loadSceneTrigger.cs" />
     <Compile Include="Assets\scrips\movePlayer.cs" />
