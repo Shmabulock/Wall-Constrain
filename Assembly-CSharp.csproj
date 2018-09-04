@@ -76,6 +76,8 @@
     <Compile Include="Assets\scrips\ObstaclesSpawner.cs" />
     <Compile Include="Assets\scrips\quitButton.cs" />
     <Compile Include="Assets\scrips\timer.cs" />
+    <Compile Include="Assets\scrips\wallFreezeBonusSpawner.cs" />
+    <Compile Include="Assets\scrips\wallFreezeBonusTrigger.cs" />
     <Compile Include="Assets\scrips\wallMove.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>F:/unity work/game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
