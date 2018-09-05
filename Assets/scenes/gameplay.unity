@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4a1bbde80fcb943a1254e3ba7e2e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0
+  delay: 22.2
   bonus: {fileID: 1144987709263636, guid: d50da6a68d0a3ae4b814448ce926a3ed, type: 2}
   frame: {fileID: 694092497}
 --- !u!4 &1068516347

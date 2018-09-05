@@ -32,18 +32,24 @@ public class wallFreezeBonusSpawner : MonoBehaviour
         wallFreezeBonusCollected = false;
 
         StartCoroutine(Spawn(delay));
-        StartCoroutine(unfreezeWalls());
+        StartCoroutine(unfreezeWalls(freezeTime));
+
     }
-    public IEnumerator unfreezeWalls()
+    public IEnumerator unfreezeWalls(float time)
     {
+        Debug.Log("log");
         while(true)
         {
-            if(wallFreezeBonusCollected)
+            yield return time;
+            Debug.Log("while");
+           if(wallFreezeBonusCollected)
             {
-                yield return new WaitForSeconds(freezeTime);
+                Debug.Log("if");
+                yield return new WaitForSeconds(time);
+                Debug.Log("yield");
                 leftWall.GetComponent<wallMove>().Speed = horizontalWallSpeed;
                 rightWall.GetComponent<wallMove>().Speed = horizontalWallSpeed;
-                upWall.GetComponent<wallMove>().Speed = verticalWallSpeed;
+                upWall.GetComponent<wallMove>().Speed = verticalWallSpeed ;
                 downWall.GetComponent<wallMove>().Speed = verticalWallSpeed;
                 wallFreezeBonusCollected = false;
             }
@@ -53,10 +59,10 @@ public class wallFreezeBonusSpawner : MonoBehaviour
     {
         while (true)
         {
+          //  delay += Random.Range(-20, 20);
+            yield return new WaitForSeconds(delay);
             if (!wallFreezeBonusCollected)
             {
-                delay += Random.Range(-20, 20);
-                yield return new WaitForSeconds(delay);
                 addBonus(bonus);
             }
         }
@@ -79,7 +85,7 @@ public class wallFreezeBonusSpawner : MonoBehaviour
     }
     public void setVerticalWallSpeed(float speed)
     {
-        horizontalWallSpeed = speed;
+       verticalWallSpeed = speed;
     }
     public void setFreezeTime(float time)
     {
