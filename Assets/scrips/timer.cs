@@ -10,20 +10,22 @@ public class timer : MonoBehaviour {
 	void Start () {
         myTimer = 0f;
         DontDestroyOnLoad(this);
-	}
+        TimerText = GameObject.Find("timerText").GetComponent<Text>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
         if (Application.loadedLevelName == "gameplay")
         {
             myTimer += Time.deltaTime;
-            TimerText = GameObject.Find("timerText").GetComponent<Text>();
+          //  TimerText = GameObject.Find("timerText").GetComponent<Text>();
             TimerText.text = myTimer.ToString("F");
         }
         if (Application.loadedLevelName == "gameOver")
         {
             TimerText = GameObject.Find("score").GetComponent<Text>();
             TimerText.text = "Your time is " + myTimer.ToString("F") + " seconds";
+            Destroy(this.gameObject);
         }
 
     }

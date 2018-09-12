@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class loadSceneButton : MonoBehaviour {
+    //public string sceneName;
     public string sceneName;
-
     // Use this for initialization
-    public void OnMouseDown()
+    public void loadScene()
     {
         SceneManager.LoadScene(sceneName);
     }
