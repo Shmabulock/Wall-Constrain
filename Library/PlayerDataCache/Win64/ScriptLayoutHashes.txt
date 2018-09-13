@@ -90,6 +90,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+4a04ec6072edcbd4ba815775a8cb8c47 Assembly-CSharp.dll:.animationScript
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 754551afe4f2531f58476bf14c510657 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -177,7 +178,9 @@ dfcbc536969f30dfc9df8a07c52dfdf9 Assembly-CSharp.dll:.movePlayer
 8f7ac6ae590a0d7988911d874d25bf7d Assembly-CSharp.dll:.wallMove
 8b842ab674bb5a50186ea81b3f9516bd Assembly-CSharp.dll:.emoteNeutralTrigger
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
+4df6574e900e2e8f2f977ee0cee361ca Assembly-CSharp.dll:.wallFreezeBonusSpawner
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+6cae61c2a2ea2d15e35dc9c2f2658bd9 Assembly-CSharp.dll:.wallFreezeBonusTrigger
 4df6574e900e2e8f2f977ee0cee361ca Assembly-CSharp.dll:.fullSpaceBonusSpawner
