@@ -184,3 +184,4 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 6cae61c2a2ea2d15e35dc9c2f2658bd9 Assembly-CSharp.dll:.wallFreezeBonusTrigger
 4df6574e900e2e8f2f977ee0cee361ca Assembly-CSharp.dll:.fullSpaceBonusSpawner
+fc94ea207f632e6e4bd7cc1344e8b86c Assembly-CSharp.dll:.activateTimer

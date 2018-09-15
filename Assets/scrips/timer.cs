@@ -31,13 +31,15 @@ public class timer : MonoBehaviour {
                     if (TimerText != null)
                         TimerText.text = myTimer.ToString("F");
                 }
+            }
+        }
                 if (Application.loadedLevelName == "gameOver")
                 {
                     TimerText = GameObject.Find("score").GetComponent<Text>();
                     TimerText.text = "Your time is " + myTimer.ToString("F") + " seconds";
                 }
-            }
-        }
+            
+        
         if(Application.loadedLevelName != "gameplay")
             Destroy(this.gameObject);
         
