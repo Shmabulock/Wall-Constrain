@@ -33,7 +33,7 @@ public class collectableTrigger : MonoBehaviour
         }
         if (collision.gameObject.tag == playerTagName)
         {
-            vec.x = bonusPower*1.6f/50;
+            vec.x = bonusPower*0.9f/50;
             
 
              leftWall.transform.position = leftWall.transform.position - vec;
