@@ -8,21 +8,22 @@ public class movePlayer: MonoBehaviour
     Vector2 posMove;
     public Vector2 topSpeed;
     Vector2 nullSpeed;
-
+    public GameObject joystick;
+   
+    joystickMove joystickScript;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         nullSpeed.x = 0;
         nullSpeed.y = 0;
-
+        joystickScript = joystick.GetComponent<joystickMove>();
     }
 
     void FixedUpdate()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        posMove.x = x;
-        posMove.y = y;
+      
+        posMove.x = joystickScript.getXAxis();
+        posMove.y = joystickScript.getYAxis();
         //posMove.z = 0;
         if (Mathf.Abs(rb.velocity.x) < Mathf.Abs(topSpeed.x) )
         {
@@ -32,7 +33,7 @@ public class movePlayer: MonoBehaviour
 
         if (Mathf.Abs(rb.velocity.y) < Mathf.Abs(topSpeed.y))
         {
-            posMove.y = y;
+            posMove.y = joystickScript.getYAxis();
             posMove.x = 0;
             rb.AddForceAtPosition(posMove, rb.position, ForceMode2D.Impulse);
         }
