@@ -63,23 +63,25 @@
   <ItemGroup>
     <Compile Include="Assets\scrips\activateTimer.cs" />
     <Compile Include="Assets\scrips\animationScript.cs" />
-    <Compile Include="Assets\scrips\collectablesSpawner.cs" />
-    <Compile Include="Assets\scrips\collectableTrigger.cs" />
-    <Compile Include="Assets\scrips\emoteCryingTrigger.cs" />
-    <Compile Include="Assets\scrips\emoteHappyTrigger.cs" />
-    <Compile Include="Assets\scrips\emoteNeutralTrigger.cs" />
-    <Compile Include="Assets\scrips\emoteSadTrigger.cs" />
     <Compile Include="Assets\scrips\figureMove.cs" />
-    <Compile Include="Assets\scrips\fullSpaceBonusSpawner.cs" />
-    <Compile Include="Assets\scrips\fullSpaceBonusTrigger.cs" />
+    <Compile Include="Assets\scrips\joystick\joystickMove.cs" />
+    <Compile Include="Assets\scrips\joystick\setAxis.cs" />
     <Compile Include="Assets\scrips\loadSceneButton.cs" />
-    <Compile Include="Assets\scrips\loadSceneTrigger.cs" />
     <Compile Include="Assets\scrips\movePlayer.cs" />
-    <Compile Include="Assets\scrips\ObstaclesSpawner.cs" />
     <Compile Include="Assets\scrips\quitButton.cs" />
+    <Compile Include="Assets\scrips\spawners\collectablesSpawner.cs" />
+    <Compile Include="Assets\scrips\spawners\fullSpaceBonusSpawner.cs" />
+    <Compile Include="Assets\scrips\spawners\ObstaclesSpawner.cs" />
+    <Compile Include="Assets\scrips\spawners\wallFreezeBonusSpawner.cs" />
     <Compile Include="Assets\scrips\timer.cs" />
-    <Compile Include="Assets\scrips\wallFreezeBonusSpawner.cs" />
-    <Compile Include="Assets\scrips\wallFreezeBonusTrigger.cs" />
+    <Compile Include="Assets\scrips\triggers\collectableTrigger.cs" />
+    <Compile Include="Assets\scrips\triggers\emoteCryingTrigger.cs" />
+    <Compile Include="Assets\scrips\triggers\emoteHappyTrigger.cs" />
+    <Compile Include="Assets\scrips\triggers\emoteNeutralTrigger.cs" />
+    <Compile Include="Assets\scrips\triggers\emoteSadTrigger.cs" />
+    <Compile Include="Assets\scrips\triggers\fullSpaceBonusTrigger.cs" />
+    <Compile Include="Assets\scrips\triggers\loadSceneTrigger.cs" />
+    <Compile Include="Assets\scrips\triggers\wallFreezeBonusTrigger.cs" />
     <Compile Include="Assets\scrips\wallMove.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>F:/unity work/game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

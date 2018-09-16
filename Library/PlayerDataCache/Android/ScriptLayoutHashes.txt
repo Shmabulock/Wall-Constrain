@@ -173,7 +173,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 98d69a140ec0084cde3b6a5e09aea295 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
-dfcbc536969f30dfc9df8a07c52dfdf9 Assembly-CSharp.dll:.movePlayer
+f4496f8f4efe45343d30242e40d9e64e Assembly-CSharp.dll:.movePlayer
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 8f7ac6ae590a0d7988911d874d25bf7d Assembly-CSharp.dll:.wallMove
 8b842ab674bb5a50186ea81b3f9516bd Assembly-CSharp.dll:.emoteNeutralTrigger
@@ -185,3 +185,4 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 6cae61c2a2ea2d15e35dc9c2f2658bd9 Assembly-CSharp.dll:.wallFreezeBonusTrigger
 4df6574e900e2e8f2f977ee0cee361ca Assembly-CSharp.dll:.fullSpaceBonusSpawner
 fc94ea207f632e6e4bd7cc1344e8b86c Assembly-CSharp.dll:.activateTimer
+5c39633dd7b4bad94d4b1dc10adaafe5 Assembly-CSharp.dll:.joystickMove
