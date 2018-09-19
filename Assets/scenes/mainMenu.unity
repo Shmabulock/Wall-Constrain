@@ -451,6 +451,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114818324260558230, guid: 91ab80dd4c8b082448e3523bfce87279,
+        type: 2}
+      propertyPath: sceneName
+      value: loadingScreenFromMainMenuToGameplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91ab80dd4c8b082448e3523bfce87279, type: 2}
   m_IsPrefabAsset: 0
