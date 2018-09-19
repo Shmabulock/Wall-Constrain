@@ -65,7 +65,6 @@
     <Compile Include="Assets\scrips\animationScript.cs" />
     <Compile Include="Assets\scrips\figureMove.cs" />
     <Compile Include="Assets\scrips\joystick\joystickMove.cs" />
-    <Compile Include="Assets\scrips\joystick\setAxis.cs" />
     <Compile Include="Assets\scrips\loadSceneButton.cs" />
     <Compile Include="Assets\scrips\movePlayer.cs" />
     <Compile Include="Assets\scrips\quitButton.cs" />

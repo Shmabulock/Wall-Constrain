@@ -18,24 +18,26 @@ public class joystickMove : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Vector3 touch;
-            
-            touch.x = Input.GetTouch(0).position.x + Input.GetTouch(0).deltaPosition.x;
-            touch.y = Input.GetTouch(0).position.y + Input.GetTouch(0).deltaPosition.y;
-            touch.z = this.GetComponent<Transform>().position.z;
 
+             touch.x = Input.GetTouch(0).position.x + Input.GetTouch(0).deltaPosition.x;
+             touch.y = Input.GetTouch(0).position.y + Input.GetTouch(0).deltaPosition.y;
+             touch.z = 0f;
             
             float MaxLength;
-            MaxLength = new Vector3(radius, radius, 1).sqrMagnitude;
+            float deltaLength;
+            MaxLength = new Vector3(radius/2, radius, 0f).sqrMagnitude; //don't get it  why the half should be here but without it,
+                                                                        // joystick can be moved out of joystickBase bounds
        
             Vector3 delta;
-            delta = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, this.GetComponent<Transform>().position.z) - joystickBase.position;
+            delta = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 0f) - joystickBase.position;
+            deltaLength = delta.sqrMagnitude;
             delta.Normalize();
             x = delta.x;
             y = delta.y;
-            if (delta.sqrMagnitude >= MaxLength)
+            if (deltaLength >= MaxLength)
             { 
                
-                delta.Scale(new Vector3(radius*1.35f, radius*1.35f, 1));
+                delta.Scale(new Vector3(radius, radius, 0));
 
                 this.GetComponent<Transform>().position = joystickBase.position + delta;
                
@@ -44,6 +46,12 @@ public class joystickMove : MonoBehaviour
             {
                 this.GetComponent<Transform>().position = touch;
             }
+        }
+        else
+        {
+            this.GetComponent<Transform>().position = joystickBase.position;
+            x = 0;
+            y = 0;
         }
     }
    public float getXAxis()

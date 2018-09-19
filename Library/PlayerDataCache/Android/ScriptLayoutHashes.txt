@@ -179,10 +179,10 @@ f4496f8f4efe45343d30242e40d9e64e Assembly-CSharp.dll:.movePlayer
 8b842ab674bb5a50186ea81b3f9516bd Assembly-CSharp.dll:.emoteNeutralTrigger
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 4df6574e900e2e8f2f977ee0cee361ca Assembly-CSharp.dll:.wallFreezeBonusSpawner
+5c39633dd7b4bad94d4b1dc10adaafe5 Assembly-CSharp.dll:.joystickMove
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 6cae61c2a2ea2d15e35dc9c2f2658bd9 Assembly-CSharp.dll:.wallFreezeBonusTrigger
 4df6574e900e2e8f2f977ee0cee361ca Assembly-CSharp.dll:.fullSpaceBonusSpawner
 fc94ea207f632e6e4bd7cc1344e8b86c Assembly-CSharp.dll:.activateTimer
-5c39633dd7b4bad94d4b1dc10adaafe5 Assembly-CSharp.dll:.joystickMove
