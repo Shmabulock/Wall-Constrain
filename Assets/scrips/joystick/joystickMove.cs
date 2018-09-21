@@ -7,14 +7,17 @@ public class joystickMove : MonoBehaviour
 
    
     public RectTransform joystickBase;
-    public float radius = 250f;
+    public bool fixedJoy;
+    public float radius;
+    [Range(0.0f,1)]
+    public float deadZone;
     private float x;
     private float y;
     // Update is called once per frame
 
     private void FixedUpdate()
     {
-
+        /*
           if (Input.touchCount > 0)
           {
               Vector3 touch;
@@ -52,8 +55,8 @@ public class joystickMove : MonoBehaviour
               this.GetComponent<Transform>().position = joystickBase.position;
               x = 0;
               y = 0;
-          }
-       /* if (Input.touchCount > 0)
+          }*/
+       if (Input.touchCount > 0)
         {
             Vector3 touch;
 
@@ -69,19 +72,32 @@ public class joystickMove : MonoBehaviour
             Vector3 delta;
             delta = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 0f) - joystickBase.position;
             deltaLength = delta.sqrMagnitude;
-            delta.Normalize();
-            x = delta.x;
-            y = delta.y;                    
+                               
             if (deltaLength >= MaxLength)
             {
-                joystickBase.GetComponent<Transform>().position = (touch - delta);                      // used with no image like on all of the screen
+                delta.Normalize();
+                x = delta.x;
+                y = delta.y;                                                                  // used with no image like on all of the screen
                 delta.Scale(new Vector3(radius, radius, 0));
+                if(!fixedJoy)
+                    joystickBase.GetComponent<Transform>().position = (touch - delta);
 
                 this.GetComponent<Transform>().position = joystickBase.position + delta;
 
             }
             else
             {
+                float k = deltaLength / MaxLength;
+                if (k < 0.5 && k > deadZone)
+                    k = 0.5f;
+               
+           
+                if (k < deadZone)
+                    k = 0;
+
+                delta.Normalize();
+                x = delta.x * k ;
+                y = delta.y * k ;
                 this.GetComponent<Transform>().position = touch;
             }
         }
@@ -90,7 +106,7 @@ public class joystickMove : MonoBehaviour
             this.GetComponent<Transform>().position = joystickBase.position;
             x = 0;
             y = 0;
-        }*/
+        }
         /*if (Input.touchCount > 0)
         {
             Vector3 touch;

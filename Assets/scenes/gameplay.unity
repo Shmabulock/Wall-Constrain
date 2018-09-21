@@ -10866,12 +10866,12 @@ Prefab:
     - target: {fileID: 224075269143805162, guid: e051f3892653b8749b843386d335d3b6,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 224075269143805162, guid: e051f3892653b8749b843386d335d3b6,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 500
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 224075269143805162, guid: e051f3892653b8749b843386d335d3b6,
         type: 2}
@@ -10955,6 +10955,21 @@ Prefab:
     - target: {fileID: 114994169375679272, guid: e051f3892653b8749b843386d335d3b6,
         type: 2}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114597181063861206, guid: e051f3892653b8749b843386d335d3b6,
+        type: 2}
+      propertyPath: deadZone
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114597181063861206, guid: e051f3892653b8749b843386d335d3b6,
+        type: 2}
+      propertyPath: radius
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114597181063861206, guid: e051f3892653b8749b843386d335d3b6,
+        type: 2}
+      propertyPath: fixedJoy
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
