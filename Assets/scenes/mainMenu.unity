@@ -294,7 +294,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1051518374}
-        m_MethodName: startAnimation
+        m_MethodName: setTriggerTrue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -352,8 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1679201464}
-  triggerName: startStretchOut
-  sceneName: gameplay
+  triggerName: playButtonTrigger
 --- !u!1001 &1149256581
 Prefab:
   m_ObjectHideFlags: 0
@@ -456,7 +455,8 @@ Prefab:
       propertyPath: sceneName
       value: loadingScreenFromMainMenuToGameplay
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114818324260558230, guid: 91ab80dd4c8b082448e3523bfce87279, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 91ab80dd4c8b082448e3523bfce87279, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1326933632
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 1326933635}
   - component: {fileID: 1326933634}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PlayButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -776,6 +776,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224697526771320768, guid: 91ab80dd4c8b082448e3523bfce87279,
     type: 2}
   m_PrefabInternal: {fileID: 1149256581}
+--- !u!114 &1679201466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1679201464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae6f5a71ad333a4982a0da24b98d502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1908832305
 Prefab:
   m_ObjectHideFlags: 0

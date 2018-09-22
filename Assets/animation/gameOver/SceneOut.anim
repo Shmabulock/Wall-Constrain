@@ -169,7 +169,7 @@ AnimationClip:
   m_Events:
   - time: 0.6666667
     functionName: loadScene
-    data: 
+    data: loadingScreenToGameplay
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

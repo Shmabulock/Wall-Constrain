@@ -62,13 +62,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scrips\activateTimer.cs" />
-    <Compile Include="Assets\scrips\animationScript.cs" />
+    <Compile Include="Assets\scrips\animation and scene manage\animatorSetTrigger.cs" />
+    <Compile Include="Assets\scrips\animation and scene manage\eventSceneLoad.cs" />
+    <Compile Include="Assets\scrips\Don't needanimationScript.cs" />
     <Compile Include="Assets\scrips\figureMove.cs" />
     <Compile Include="Assets\scrips\joystick\joystickMove.cs" />
     <Compile Include="Assets\scrips\loadingScreenAsyncSceneLoad.cs" />
     <Compile Include="Assets\scrips\loadSceneButton.cs" />
     <Compile Include="Assets\scrips\movePlayer.cs" />
+    <Compile Include="Assets\scrips\pauseButton.cs" />
     <Compile Include="Assets\scrips\quitButton.cs" />
+    <Compile Include="Assets\scrips\resumeButton.cs" />
     <Compile Include="Assets\scrips\spawners\collectablesSpawner.cs" />
     <Compile Include="Assets\scrips\spawners\fullSpaceBonusSpawner.cs" />
     <Compile Include="Assets\scrips\spawners\ObstaclesSpawner.cs" />
