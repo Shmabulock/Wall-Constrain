@@ -11504,6 +11504,18 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 95756556201660026, guid: 91ab80dd4c8b082448e3523bfce87279,
     type: 2}
   m_PrefabInternal: {fileID: 1904663753}
+--- !u!114 &1336785475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1336785469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222a3aff6bea76c42b6c31bbdbeccec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
 --- !u!1 &1359442027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1714184677780652, guid: 7e388d210f9a6414994b2192ebd2e107,
