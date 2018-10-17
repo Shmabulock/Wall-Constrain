@@ -166,3 +166,5 @@ F:\unity work\game\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 F:\unity work\game\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 F:\unity work\game\obj\Debug\Assembly-CSharp.dll
 F:\unity work\game\obj\Debug\Assembly-CSharp.pdb
+F:\unity work\game\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+F:\unity work\game\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
