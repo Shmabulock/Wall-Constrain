@@ -180,6 +180,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 f4496f8f4efe45343d30242e40d9e64e Assembly-CSharp.dll:.movePlayer
+3399c3262d22a8c3adc0eac64d5c95b8 Assembly-CSharp.dll:.cubeKeeper
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 e36aea28ba4663ba7df71df4d55f1403 Assembly-CSharp.dll:.pauseButton
 8f7ac6ae590a0d7988911d874d25bf7d Assembly-CSharp.dll:.wallMove
@@ -194,4 +195,3 @@ db5da181564e83e4f80e1971380d0496 Assembly-CSharp.dll:.joystickMove
 4df6574e900e2e8f2f977ee0cee361ca Assembly-CSharp.dll:.fullSpaceBonusSpawner
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ResetTrigger
 fc94ea207f632e6e4bd7cc1344e8b86c Assembly-CSharp.dll:.activateTimer
-3399c3262d22a8c3adc0eac64d5c95b8 Assembly-CSharp.dll:.cubeKeeper
