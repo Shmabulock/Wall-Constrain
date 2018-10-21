@@ -64,6 +64,7 @@
     <Compile Include="Assets\scrips\activateTimer.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\animatorSetTrigger.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\eventSceneLoad.cs" />
+    <Compile Include="Assets\scrips\cube selection\cubeKeeper.cs" />
     <Compile Include="Assets\scrips\cube selection\cubes.cs" />
     <Compile Include="Assets\scrips\Don't needanimationScript.cs" />
     <Compile Include="Assets\scrips\figureMove.cs" />

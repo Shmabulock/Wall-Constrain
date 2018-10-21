@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Xml.Serialization;
 
 public class cubes : MonoBehaviour {
 
     public GameObject cubesGameObj;
+    public GameObject cubeInfoKeeper;
 
     bool isSwitching;
     public struct cube
@@ -29,7 +31,10 @@ public class cubes : MonoBehaviour {
             allCubes[i].isLocked = false;
         }
         isSwitching = false;
-        selected = 0;
+        if (PlayerPrefs.HasKey("selected"))
+            selected = PlayerPrefs.GetInt("selected");
+        else
+            selected = 0;
         change();
         this.GetComponent<Animator>().SetTrigger("decrease");
 
@@ -78,11 +83,13 @@ public class cubes : MonoBehaviour {
     }
     public void change()
     {
-       
-        this.GetComponent<Image>().sprite = allCubes[selected].theCube.GetComponent<SpriteRenderer>().sprite;
-        this.GetComponent<Image>().material = allCubes[selected].theCube.GetComponent<SpriteRenderer>().sharedMaterial;
-        this.GetComponent<Image>().color = allCubes[selected].theCube.GetComponent<SpriteRenderer>().color;
+
+        cubeInfoKeeper.GetComponent<cubeKeeper>().sprite = this.GetComponent<Image>().sprite = allCubes[selected].theCube.GetComponent<SpriteRenderer>().sprite;
+        cubeInfoKeeper.GetComponent<cubeKeeper>().material = this.GetComponent<Image>().material = allCubes[selected].theCube.GetComponent<SpriteRenderer>().sharedMaterial;
+        cubeInfoKeeper.GetComponent<cubeKeeper>().color = this.GetComponent<Image>().color = allCubes[selected].theCube.GetComponent<SpriteRenderer>().color;
         this.GetComponent<Animator>().SetTrigger("increase");
+       
+        PlayerPrefs.SetInt("selected", selected);
 
     }
     public void resetTriggers()
@@ -92,4 +99,5 @@ public class cubes : MonoBehaviour {
         this.GetComponent<Animator>().ResetTrigger("decrease");
         this.GetComponent<Animator>().ResetTrigger("increase");
     }
+   
 }
