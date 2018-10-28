@@ -33,11 +33,16 @@ public class timer : MonoBehaviour {
                 }
             }
         }
-                if (Application.loadedLevelName == "gameOver")
-                {
-                    TimerText = GameObject.Find("score").GetComponent<Text>();
-                    TimerText.text = "Your time is " + myTimer.ToString("F") + " seconds";
-                }
+        if (Application.loadedLevelName == "gameOver")
+        {
+            TimerText = GameObject.Find("score").GetComponent<Text>();
+            if (!PlayerPrefs.HasKey("Highscore"))
+                PlayerPrefs.SetFloat("Highscore", myTimer);
+            if(PlayerPrefs.GetFloat("Highscore") < myTimer)
+                PlayerPrefs.SetFloat("Highscore", myTimer);
+
+            TimerText.text = "Highscore: " + PlayerPrefs.GetFloat("Highscore").ToString("F") + "\n" + "Your time is " + myTimer.ToString("F") + " seconds";
+        }
             
         
         if(Application.loadedLevelName != "gameplay")
