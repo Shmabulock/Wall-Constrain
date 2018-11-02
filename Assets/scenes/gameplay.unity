@@ -10880,6 +10880,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1019014725913370, guid: e051f3892653b8749b843386d335d3b6,
     type: 2}
   m_PrefabInternal: {fileID: 1368487363}
+--- !u!114 &962457909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114597181063861206, guid: e051f3892653b8749b843386d335d3b6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1368487363}
+  m_Script: {fileID: 11500000, guid: dc64d8dd3c0d7914f80b9cae76f3adb0, type: 3}
 --- !u!50 &962457910
 Rigidbody2D:
   serializedVersion: 4
@@ -11335,6 +11341,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1234791556}
         m_MethodName: OpenPauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 962457909}
+        m_MethodName: setJoystickDisabled
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
