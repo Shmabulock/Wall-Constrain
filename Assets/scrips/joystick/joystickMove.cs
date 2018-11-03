@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class joystickMove : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class joystickMove : MonoBehaviour
     public float deadZone;
     private float x;
     private float y;
+    private bool isTouching = false;
+
     // Update is called once per frame
 
     private void FixedUpdate()
@@ -59,11 +62,16 @@ public class joystickMove : MonoBehaviour
        if (Input.touchCount > 0)
         {
             Vector3 touch;
-
+            
             touch.x = Input.GetTouch(0).position.x + Input.GetTouch(0).deltaPosition.x;
             touch.y = Input.GetTouch(0).position.y + Input.GetTouch(0).deltaPosition.y;
             touch.z = 0f;
-
+            if (!isTouching)
+            {
+                setJoystickEnabled();
+                joystickBase.position = touch;
+                isTouching = true;
+            }
             float MaxLength;
             float deltaLength;
             MaxLength = new Vector3(radius / 2, radius, 0f).sqrMagnitude; //don't get it  why the half should be here but without it,
@@ -106,6 +114,8 @@ public class joystickMove : MonoBehaviour
             this.GetComponent<Transform>().position = joystickBase.position;
             x = 0;
             y = 0;
+            setJoystickDisabled();
+            isTouching = false;
         }
         /*if (Input.touchCount > 0)
         {
@@ -138,5 +148,15 @@ public class joystickMove : MonoBehaviour
     public float getYAxis()
     {
         return y;
+    }
+    public void setJoystickDisabled()
+    {
+        joystickBase.gameObject.GetComponent<Image>().enabled = false;
+        this.gameObject.GetComponent<Image>().enabled = false;
+    }
+    public void setJoystickEnabled()
+    {
+        joystickBase.gameObject.GetComponent<Image>().enabled = true;
+        this.gameObject.GetComponent<Image>().enabled = true;
     }
 }

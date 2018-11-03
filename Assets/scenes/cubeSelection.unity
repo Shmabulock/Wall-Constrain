@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef53890eaf0aaf4cb479054ce4a52f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubesGameObj: {fileID: 1441326478108470, guid: 469a71380478aa142ae4e933d5c4fc76,
+  cubesGameObj: {fileID: 1465917274611322, guid: d6b88dc9fd3f5334b99acffa5f4da552,
     type: 2}
   cubeInfoKeeper: {fileID: 208793547}
 --- !u!95 &1687196114
