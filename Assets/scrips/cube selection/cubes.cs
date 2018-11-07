@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Xml.Serialization;
+using System.Xml.Serialization;//kinda lazy to check but don't need;
 
 public class cubes : MonoBehaviour {
 
@@ -19,6 +19,7 @@ public class cubes : MonoBehaviour {
     cube[] allCubes;
     int selected;
     int numberOfCubes;
+    public Text CubeNumber;
 
 
     void Start () {
@@ -88,7 +89,8 @@ public class cubes : MonoBehaviour {
         cubeInfoKeeper.GetComponent<cubeKeeper>().material = this.GetComponent<Image>().material = allCubes[selected].theCube.GetComponent<SpriteRenderer>().sharedMaterial;
         cubeInfoKeeper.GetComponent<cubeKeeper>().color = this.GetComponent<Image>().color = allCubes[selected].theCube.GetComponent<SpriteRenderer>().color;
         this.GetComponent<Animator>().SetTrigger("increase");
-       
+        CubeNumber.text = selected+1 + "/" + numberOfCubes;
+        
         PlayerPrefs.SetInt("selected", selected);
 
     }

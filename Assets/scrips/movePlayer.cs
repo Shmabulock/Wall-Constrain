@@ -23,7 +23,7 @@ public class movePlayer: MonoBehaviour
     {
       
         posMove.x = joystickScript.getXAxis();
-        posMove.y = joystickScript.getYAxis();
+        posMove.y = joystickScript.getYAxis(); //kinda don't need, but too lazy too check
         //posMove.z = 0;
         if (Mathf.Abs(rb.velocity.x) < Mathf.Abs(topSpeed.x) )
         {
