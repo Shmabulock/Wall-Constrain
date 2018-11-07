@@ -85,7 +85,7 @@ public class joystickMove : MonoBehaviour
             {
                 delta.Normalize();
                 x = delta.x;
-                y = delta.y;                                                                  // used with no image like on all of the screen
+                y = delta.y;                                                                  
                 delta.Scale(new Vector3(radius, radius, 0));
                 if(!fixedJoy)
                     joystickBase.GetComponent<Transform>().position = (touch - delta);

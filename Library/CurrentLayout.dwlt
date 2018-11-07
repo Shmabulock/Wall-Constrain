@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 88
+  controlID: 32
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 89
+  controlID: 33
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 47
+  controlID: 34
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,7 +212,7 @@ MonoBehaviour:
   - {fileID: 15}
   - {fileID: 18}
   m_Selected: 1
-  m_LastSelected: 2
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -301,10 +301,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -90.8
-    m_HBaseRangeMax: 90.8
-    m_VBaseRangeMin: -161.6
-    m_VBaseRangeMax: 161.6
+    m_HBaseRangeMin: -113.6
+    m_HBaseRangeMax: 113.6
+    m_VBaseRangeMin: -202
+    m_VBaseRangeMax: 202
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -374,7 +374,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 78effefff2effeff66f1feff4af2feff54f2feff5cf2feffacf2feff1aefffff84effffff4f0ffffd4f1ffffdaf1ffffdef1ffff2af2ffffd4fbffff00000000
+    m_ExpandedIDs: f682ffff8683fffff684ffffd685ffffdc85ffffe085ffff2c86ffffba8bffff4a8cffffba8dffff9a8effffa08effffa48efffff08effff7493ffff0494ffff7495ffff5496ffff5a96ffff5e96ffffaa96ffff3c9affffcc9affff3c9cffff1c9dffff229dffff269dffff729dffffd6a0ffff66a1ffffd6a2ffffb4a3ffffbaa3ffffbea3ffff0aa4ffffaaa9ffff3aaaffffaaabffff8aacffff90acffff94acffffe0acffff26b0ffffb6b0ffff26b2ffff06b3ffff0cb3ffff10b3ffff5cb3ffffbab7ffff4ab8ffffbab9ffff9abaffffa0baffffa4bafffff0baffff6ec0fffffec0ffff6ec2ffff4ec3ffff54c3ffff58c3ffffa4c3ffffc0c6ffff50c7ffffc0c8ffffa0c9ffffa6c9ffffaac9fffff6c9ffff04cdffff94cdffff04cfffffe4cfffffeacfffffeecfffff3ad0ffffead3ffff7ad4ffffead5ffffcad6ffffd0d6ffffd4d6ffff20d7ffff24daffffb4daffff28dcffff0cddffff16ddffff1eddffff6eddffff5aeeffffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -429,9 +429,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 92.717285, y: -4.703501, z: 0.53208673}
+    m_Target: {x: -17.506138, y: -6.986521, z: 2.4243429}
     speed: 2
-    m_Value: {x: 92.717285, y: -4.703501, z: 0.53208673}
+    m_Value: {x: -17.506138, y: -6.986521, z: 2.4243429}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -463,9 +463,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 203.67093
+    m_Target: 14.308904
     speed: 2
-    m_Value: 203.67093
+    m_Value: 14.308904
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1417,20 +1417,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/animation/gameplay/bonuses
+    - Assets/scrips
   m_ViewMode: 1
   m_StartGridSize: 87
   m_LastFolders:
-  - Assets/animation/gameplay/bonuses
+  - Assets/scrips
   m_LastFoldersGridSize: 87
   m_LastProjectPath: F:\unity work\game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 69}
-    m_SelectedIDs: 4a380000
-    m_LastClickedID: 14410
-    m_ExpandedIDs: 000000001c2a00008c2a0000a42a0000402b0000142c00006c2c0000982d00005c2e000000ca9a3b
+    scrollPos: {x: 0, y: 129}
+    m_SelectedIDs: 702c0000
+    m_LastClickedID: 11376
+    m_ExpandedIDs: 00000000182a00008a2a0000a22a0000402b0000162c0000702c00009c2d0000602e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1458,7 +1458,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001c2a00008c2a0000a42a0000402b00006c2c0000982d00005c2e0000
+    m_ExpandedIDs: 00000000182a00008a2a0000a22a0000402b0000162c0000702c00009c2d0000602e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

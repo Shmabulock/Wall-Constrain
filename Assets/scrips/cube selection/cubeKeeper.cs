@@ -9,7 +9,8 @@ public class cubeKeeper : MonoBehaviour {
     public Sprite sprite;
     public Material material;
     public Color color;
-    
+    private bool wasInGameplay = false;
+    private bool wasInGameover = false;
     private GameObject player;
     private void Start()
     {
@@ -17,17 +18,20 @@ public class cubeKeeper : MonoBehaviour {
     }
     private void FixedUpdate()
     {
-        if(SceneManager.GetActiveScene().name == "gameplay")
+        if(((SceneManager.GetActiveScene().name == "gameplay" && !wasInGameplay) || (SceneManager.GetActiveScene().name == "gameplay") && wasInGameover))
         {
             player = GameObject.FindWithTag("Player");
-            if (player != null)
-                Debug.Log("blya");
-            
+                        
             player.GetComponent<SpriteRenderer>().sprite = sprite;
             player.GetComponent<SpriteRenderer>().material = material;
             player.GetComponent<SpriteRenderer>().color = color;
-            Destroy(this.gameObject);
+            wasInGameplay = true;
+            wasInGameover = false;
         }
+        if (SceneManager.GetActiveScene().name == "cubeSelection" && wasInGameplay)
+            Destroy(this.gameObject);
+        if (SceneManager.GetActiveScene().name == "gameOver")
+            wasInGameover = true;
     }
 }
 
