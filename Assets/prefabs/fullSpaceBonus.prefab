@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212980622882993452}
   - component: {fileID: 58851285853634806}
   - component: {fileID: 114526721813144448}
+  - component: {fileID: 95004512148649574}
   m_Layer: 0
   m_Name: fullSpaceBonus
   m_TagString: Untagged
@@ -57,6 +58,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!95 &95004512148649574
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1499835535728466}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76fa2228077aa5d489d94d173166464b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114526721813144448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,7 +90,6 @@ MonoBehaviour:
   wallsTagName: Walls
   playerTagName: Player
   frame: {fileID: 0}
-  bonusPower: 0
 --- !u!212 &212980622882993452
 SpriteRenderer:
   m_ObjectHideFlags: 1
