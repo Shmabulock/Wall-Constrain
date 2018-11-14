@@ -16,6 +16,7 @@ public class movePlayer: MonoBehaviour
     Vector3 diff;
     float torque;
 
+    bool SuperMode = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,14 +30,25 @@ public class movePlayer: MonoBehaviour
 
     void FixedUpdate()
     {
+        
         diff = (this.transform.position - lastPos).normalized;
         torque = lastDiff.x * diff.y - lastDiff.y * diff.x;
 
         rb.AddTorque(-1*torque/100, ForceMode2D.Impulse);
-        
-        
-        posMove.x = joystickScript.getXAxis();
-        posMove.y = joystickScript.getYAxis(); //kinda don't need, but too lazy too check
+
+        if (Mathf.Abs(rb.angularVelocity) > 1500f)
+        {
+            SuperMode = true;
+            this.GetComponent<ParticleSystem>().Play();
+        }
+        else
+            SuperMode = false;
+
+        // posMove.x = Input.GetAxis("Horizontal");
+       //  posMove.y = Input.GetAxis("Vertical");
+
+          posMove.x = joystickScript.getXAxis();
+         posMove.y = joystickScript.getYAxis(); //kinda don't need, but too lazy too check
         //posMove.z = 0;
         if (Mathf.Abs(rb.velocity.x) < Mathf.Abs(topSpeed.x) )
         {
@@ -57,5 +69,9 @@ public class movePlayer: MonoBehaviour
         // transform.position += posMove * Time.fixedDeltaTime * Speed;
 
 
+    }
+    public bool isInSupermode()
+    {
+        return SuperMode;
     }
 }

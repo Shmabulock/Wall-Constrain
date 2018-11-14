@@ -31,7 +31,7 @@ public class emoteHappyTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("happy");
+     //   Debug.Log("happy");
         theEmotes = emotes.GetComponentsInChildren<Transform>();
         emoteHappy = theEmotes[4].gameObject;
         emoteNeutral = theEmotes[3].gameObject;

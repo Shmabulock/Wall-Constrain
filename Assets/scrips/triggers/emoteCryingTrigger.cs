@@ -30,7 +30,7 @@ public class emoteCryingTrigger : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("sad");
+       // Debug.Log("sad");
         theEmotes = emotes.GetComponentsInChildren<Transform>();
         emoteHappy = theEmotes[4].gameObject;
         emoteNeutral = theEmotes[3].gameObject;

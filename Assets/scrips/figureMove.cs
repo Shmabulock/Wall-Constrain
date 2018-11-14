@@ -73,6 +73,22 @@ public class figureMove : MonoBehaviour
             multiplier += 0.05f;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log("1 collision");
+        if (collision.gameObject.tag == "Player")
+        {
+           // Debug.Log("2 tag player");
+
+            if (collision.gameObject.GetComponent<movePlayer>().isInSupermode())
+            {
+           //     Debug.Log("3 angVel > 700f");
+                collision.rigidbody.angularVelocity /= 4;
+                Destroy(this.gameObject);
+            }
+          
+        }
+    }
     public Napr GetNapr()
     {
         return what;

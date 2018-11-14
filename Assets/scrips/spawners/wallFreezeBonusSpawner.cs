@@ -37,16 +37,16 @@ public class wallFreezeBonusSpawner : MonoBehaviour
     }
     public IEnumerator unfreezeWalls(float time)
     {
-        Debug.Log("log");
+      //  Debug.Log("log");
         while(true)
         {
             yield return time;
-            Debug.Log("while");
+           // Debug.Log("while");
            if(wallFreezeBonusCollected)
             {
-                Debug.Log("if");
+                //Debug.Log("if");
                 yield return new WaitForSeconds(time);
-                Debug.Log("yield");
+              //  Debug.Log("yield");
                 leftWall.GetComponent<wallMove>().Speed = horizontalWallSpeed;
                 rightWall.GetComponent<wallMove>().Speed = horizontalWallSpeed;
                 upWall.GetComponent<wallMove>().Speed = verticalWallSpeed ;
