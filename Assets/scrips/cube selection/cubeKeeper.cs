@@ -16,7 +16,7 @@ public class cubeKeeper : MonoBehaviour {
     {
         DontDestroyOnLoad(this.gameObject);
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if(((SceneManager.GetActiveScene().name == "gameplay" && !wasInGameplay) || (SceneManager.GetActiveScene().name == "gameplay") && wasInGameover))
         {
@@ -32,6 +32,8 @@ public class cubeKeeper : MonoBehaviour {
             Destroy(this.gameObject);
         if (SceneManager.GetActiveScene().name == "gameOver")
             wasInGameover = true;
+        if (SceneManager.GetActiveScene().name == "loadingScreenToGameplay")
+            wasInGameplay = false;
     }
 }
 
