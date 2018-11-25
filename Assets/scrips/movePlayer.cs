@@ -30,11 +30,11 @@ public class movePlayer: MonoBehaviour
 
     void FixedUpdate()
     {
-        posMove.x = Input.GetAxis("Horizontal");
-        posMove.y = Input.GetAxis("Vertical");
+        //posMove.x = Input.GetAxis("Horizontal");
+        //posMove.y = Input.GetAxis("Vertical");
 
-         //posMove.x = joystickScript.getXAxis();
-        // posMove.y = joystickScript.getYAxis(); 
+         posMove.x = joystickScript.getXAxis();
+         posMove.y = joystickScript.getYAxis(); 
         // posMove.z = 0;
 
 
