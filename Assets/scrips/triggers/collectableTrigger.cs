@@ -14,6 +14,7 @@ public class collectableTrigger : MonoBehaviour
     GameObject upWall;
     GameObject downWall;
     public float bonusPower;
+    float superModScaler = 1;
     Vector3 vec;
    
 
@@ -33,17 +34,20 @@ public class collectableTrigger : MonoBehaviour
         }
         if (collision.gameObject.tag == playerTagName)
         {
-            vec.x = bonusPower*0.9f/50;
-            
+            if (collision.gameObject.GetComponent<movePlayer>().isInSupermode())
+                superModScaler = 1.2f;
+            else
+                superModScaler = 1f;
 
-             leftWall.transform.position = leftWall.transform.position - vec;
-             rightWall.transform.position = rightWall.transform.position + vec;
-             vec.x = 0;
-             vec.y = bonusPower*1.6f/50;
-             upWall.transform.position = upWall.transform.position + vec;
-             downWall.transform.position = downWall.transform.position - vec;
+            vec.x = bonusPower * 0.9f / 50 * superModScaler;
+            leftWall.transform.position = leftWall.transform.position - vec;
+            rightWall.transform.position = rightWall.transform.position + vec;
+            vec.x = 0;
+            vec.y = bonusPower * 1.6f / 50 * superModScaler;
+            upWall.transform.position = upWall.transform.position + vec;
+            downWall.transform.position = downWall.transform.position - vec;
 
-             Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
     private void OnDestroy()
