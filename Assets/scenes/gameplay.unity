@@ -11000,7 +11000,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4531078416257494, guid: 96a90136ea6adb8428cf90ec98938e13, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.42
+      value: -6.74
       objectReference: {fileID: 0}
     - target: {fileID: 4531078416257494, guid: 96a90136ea6adb8428cf90ec98938e13, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11040,6 +11040,21 @@ Prefab:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 962457905}
+    - target: {fileID: 114898017462607846, guid: 96a90136ea6adb8428cf90ec98938e13,
+        type: 2}
+      propertyPath: topSpeed.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898017462607846, guid: 96a90136ea6adb8428cf90ec98938e13,
+        type: 2}
+      propertyPath: topSpeed.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114898017462607846, guid: 96a90136ea6adb8428cf90ec98938e13,
+        type: 2}
+      propertyPath: topSpeed
+      value: 7.59
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96a90136ea6adb8428cf90ec98938e13, type: 2}
   m_IsPrefabAsset: 0
@@ -11318,7 +11333,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -407, y: 831.08}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234791553
 MonoBehaviour:
@@ -11402,8 +11417,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b4355b78ebaae824eaaa23da73cef270, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
