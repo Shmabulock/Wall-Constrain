@@ -251,8 +251,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: -152}
-  m_SizeDelta: {x: 348.6, y: 169.2}
+  m_AnchoredPosition: {x: -300, y: -152}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1051518371
 MonoBehaviour:
@@ -325,8 +325,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 7d204937da6f648469d9c87f448cfa90, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 1326933635}
   - component: {fileID: 1326933634}
   m_Layer: 5
-  m_Name: startButtonText
+  m_Name: gameName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,7 +659,7 @@ Prefab:
     - target: {fileID: 224530310921693510, guid: 6d4f88cb86c9de6458455285e61c75ba,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -374
+      value: -375
       objectReference: {fileID: 0}
     - target: {fileID: 224530310921693510, guid: 6d4f88cb86c9de6458455285e61c75ba,
         type: 2}
@@ -714,12 +714,12 @@ Prefab:
     - target: {fileID: 114441955476348726, guid: 6d4f88cb86c9de6458455285e61c75ba,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.05740881
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114441955476348726, guid: 6d4f88cb86c9de6458455285e61c75ba,
         type: 2}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 222124298659632358, guid: 6d4f88cb86c9de6458455285e61c75ba,
         type: 2}
@@ -755,6 +755,17 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_MaxSize
       value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 114441955476348726, guid: 6d4f88cb86c9de6458455285e61c75ba,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d204937da6f648469d9c87f448cfa90,
+        type: 3}
+    - target: {fileID: 114441955476348726, guid: 6d4f88cb86c9de6458455285e61c75ba,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d4f88cb86c9de6458455285e61c75ba, type: 2}
@@ -1224,7 +1235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.54509807, g: 0.81960785, b: 0.80784315, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1233,7 +1244,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 126
+    m_FontSize: 93
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
