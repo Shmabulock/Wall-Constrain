@@ -42,7 +42,7 @@ public class timer : MonoBehaviour {
                 PlayerPrefs.SetFloat("Highscore", myTimer);
             PlayerPrefs.Save();
 
-            TimerText.text = "Highscore: " + PlayerPrefs.GetFloat("Highscore").ToString("F") + "\n" + "Your time is " + myTimer.ToString("F") + " seconds";
+            TimerText.text = "Highscore: " + PlayerPrefs.GetFloat("Highscore").ToString("F") + "\n" + "Your time is: " + myTimer.ToString("F");
         }
             
         
