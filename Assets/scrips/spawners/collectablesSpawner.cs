@@ -9,6 +9,7 @@ public class collectablesSpawner : MonoBehaviour
     public GameObject bonus;
     public Camera mainCamera;
     private int bonusCount;
+    private float collectedThisGame;
     private void Start()
     {
         bonusCount = 0;
@@ -56,5 +57,13 @@ public class collectablesSpawner : MonoBehaviour
     public int getBonusCount()
     {
         return bonusCount;
+    }
+    public void increeseCollectedThisGameBy(float a)
+    {
+        collectedThisGame += a;
+    }
+    public float getCollectedThisGame()
+    {
+        return collectedThisGame;
     }
 }

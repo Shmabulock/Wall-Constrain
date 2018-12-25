@@ -195,3 +195,4 @@ db5da181564e83e4f80e1971380d0496 Assembly-CSharp.dll:.joystickMove
 4df6574e900e2e8f2f977ee0cee361ca Assembly-CSharp.dll:.fullSpaceBonusSpawner
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ResetTrigger
 fc94ea207f632e6e4bd7cc1344e8b86c Assembly-CSharp.dll:.activateTimer
+275d6c60c3b62071ef8421a13da63e43 Assembly-CSharp.dll:.collectablesTrack
