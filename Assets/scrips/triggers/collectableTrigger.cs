@@ -7,7 +7,7 @@ public class collectableTrigger : MonoBehaviour
 {
     public string wallsTagName;
     public string playerTagName;
-    public GameObject frame;
+    public GameObject frame;// dont need ?
     private collectablesSpawner collSpawner;
     GameObject leftWall;
     GameObject rightWall;
@@ -47,6 +47,7 @@ public class collectableTrigger : MonoBehaviour
             upWall.transform.position = upWall.transform.position + vec;
             downWall.transform.position = downWall.transform.position - vec;
 
+            collSpawner.GetComponent<collectablesSpawner>().increeseCollectedThisGameBy(superModScaler);
             Destroy(this.gameObject);
         }
     }
@@ -54,6 +55,7 @@ public class collectableTrigger : MonoBehaviour
     {
         if (collSpawner != null) 
             collSpawner.GetComponent<collectablesSpawner>().setBonusCount(collSpawner.GetComponent<collectablesSpawner>().getBonusCount()-1);
+
     }
 }
 
