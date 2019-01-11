@@ -77,6 +77,7 @@
     <Compile Include="Assets\scrips\movePlayer.cs" />
     <Compile Include="Assets\scrips\pauseButton.cs" />
     <Compile Include="Assets\scrips\quitButton.cs" />
+    <Compile Include="Assets\scrips\resetGame.cs" />
     <Compile Include="Assets\scrips\resumeButton.cs" />
     <Compile Include="Assets\scrips\spawners\collectablesSpawner.cs" />
     <Compile Include="Assets\scrips\spawners\fullSpaceBonusSpawner.cs" />
