@@ -666,6 +666,7 @@ GameObject:
   - component: {fileID: 657382963}
   - component: {fileID: 657382962}
   - component: {fileID: 657382965}
+  - component: {fileID: 657382966}
   m_Layer: 5
   m_Name: buyButton
   m_TagString: Untagged
@@ -732,8 +733,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: setTriggerTrue
+      - m_Target: {fileID: 657382966}
+        m_MethodName: buySelectedCube
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -801,6 +802,18 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &657382966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 657382960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f6bcea998a6e84d91258fc8fdfa782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cube: {fileID: 1687196109}
 --- !u!1 &952826267
 GameObject:
   m_ObjectHideFlags: 0

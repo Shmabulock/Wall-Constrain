@@ -204,6 +204,7 @@ public class cubes : MonoBehaviour {
         }
         else
         {
+            this.GetComponent<Image>().color = Color.white;
             BuyButton.SetActive(false);
             playButton.SetActive(true);
         }
@@ -213,5 +214,13 @@ public class cubes : MonoBehaviour {
 
     }
 
+    public int getSelected()
+    {
+        return selected;
+    }
+ public void unlockSelectedCube(int selected)
+    {
+        allCubes[selected].isLocked = false;
+    }
    
 }

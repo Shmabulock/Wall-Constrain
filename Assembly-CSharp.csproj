@@ -65,6 +65,7 @@
     <Compile Include="Assets\scrips\animation and scene manage\animatorSetTrigger.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\eventSceneLoad.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\ResetTrigger.cs" />
+    <Compile Include="Assets\scrips\cube selection\BuyCube.cs" />
     <Compile Include="Assets\scrips\cube selection\collectablesTrack.cs" />
     <Compile Include="Assets\scrips\cube selection\cubeKeeper.cs" />
     <Compile Include="Assets\scrips\cube selection\cubes.cs" />
