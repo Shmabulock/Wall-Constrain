@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/cubeSelection.unity
+- path: Assets/scenes/options.unity
   isLoaded: 1
   isActive: 1

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/scenes/mainMenu.unity
     guid: a36c18ae3bd2483418f3aa8df7977c2e
   - enabled: 1
+    path: Assets/scenes/options.unity
+    guid: 266c34c6e75beef4988c8f686a375c32
+  - enabled: 1
     path: Assets/scenes/cubeSelection.unity
     guid: 5b9b15807610ec146a91f03fe65492e2
   - enabled: 1
