@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class collectableTrigger : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class collectableTrigger : MonoBehaviour
     public float bonusPower;
     float superModScaler = 1;
     Vector3 vec;
+
    
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,6 +50,7 @@ public class collectableTrigger : MonoBehaviour
             downWall.transform.position = downWall.transform.position - vec;
 
             collSpawner.GetComponent<collectablesSpawner>().increeseCollectedThisGameBy(superModScaler);
+            
             Destroy(this.gameObject);
         }
     }

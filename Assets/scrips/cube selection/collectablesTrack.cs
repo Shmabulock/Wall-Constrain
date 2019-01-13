@@ -6,9 +6,12 @@ using UnityEngine.UI;
 
 public class collectablesTrack : MonoBehaviour {
 
-    public GameObject collectablesSpawner;
+   // public GameObject collectablesSpawner;
     public string tagName;
     bool written = false;
+
+    [SerializeField]
+    collectablesSpawner spawner;
 
     private void Start()
     {
@@ -34,7 +37,9 @@ public class collectablesTrack : MonoBehaviour {
             {
                 if (!written)
                 {
-                    PlayerPrefs.SetFloat("collectablesCount", PlayerPrefs.GetFloat("collectablesCount") + collectablesSpawner.GetComponent<collectablesSpawner>().getCollectedThisGame());
+                    //PlayerPrefs.SetFloat("collectablesCount", PlayerPrefs.GetFloat("collectablesCount") + collectablesSpawner.GetComponent<collectablesSpawner>().getCollectedThisGame());
+                    PlayerPrefs.SetFloat("collectablesCount", PlayerPrefs.GetFloat("collectablesCount") + spawner.getCollectedThisGame());
+
                     written = true;
                 }
             }

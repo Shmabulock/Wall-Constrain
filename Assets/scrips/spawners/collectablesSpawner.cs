@@ -10,6 +10,12 @@ public class collectablesSpawner : MonoBehaviour
     public Camera mainCamera;
     private int bonusCount;
     private float collectedThisGame;
+
+    public enum  type {circle = 0,  fullSpaceBunus = 1}
+
+    public type type1;
+
+
     private void Start()
     {
         bonusCount = 0;
