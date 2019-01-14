@@ -3,6 +3,7 @@ PlayerPath?
 F:/unity work/builded projects/gameandoid
 SceneListBegin?
 Assets/scenes/mainMenu.unity
+Assets/scenes/options.unity
 Assets/scenes/cubeSelection.unity
 Assets/scenes/loadingScreenToGameplay.unity
 Assets/scenes/gameplay.unity
@@ -158,11 +159,12 @@ da21fc3f8056b1f91c3dd09c7bf4f90a UnityEngine.Networking.dll:UnityEngine.Networki
 529a95e9e8e7686c4816e08fbb37183f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.resetGame
 72a8523b432c0a5317826b7a9e0a0e79 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 e53cc67d84060d628c7f03fc725766d8 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 275d6c60c3b62071ef8421a13da63e43 Assembly-CSharp.dll:.collectablesTrack
 392c5b921098bd4c139d9146d0efa6d7 Unity.TextMeshPro.dll:TMPro.TMP_Settings
-53e0a04eb5410d5b8488fabbccf661e5 Assembly-CSharp.dll:.collectableTrigger
+698ba5dc4834fccc79609230368e921b Assembly-CSharp.dll:.collectableTrigger
 486cd95c82d8305219c352c06b776e1f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 9d863b523b577f5c3d915351a74cd338 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
@@ -197,3 +199,4 @@ db5da181564e83e4f80e1971380d0496 Assembly-CSharp.dll:.joystickMove
 4df6574e900e2e8f2f977ee0cee361ca Assembly-CSharp.dll:.fullSpaceBonusSpawner
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ResetTrigger
 fc94ea207f632e6e4bd7cc1344e8b86c Assembly-CSharp.dll:.activateTimer
+ffa2ba7e386b9930187047e465e93240 Assembly-CSharp.dll:.sliderPlayerPrefs
