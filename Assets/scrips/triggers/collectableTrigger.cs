@@ -8,24 +8,25 @@ public class collectableTrigger : MonoBehaviour
 {
     public string wallsTagName;
     public string playerTagName;
-    public GameObject frame;// dont need ?
+    Frame frame;
     private collectablesSpawner collSpawner;
-    GameObject leftWall;
+   /* GameObject leftWall;
     GameObject rightWall;
     GameObject upWall;
-    GameObject downWall;
-    public float bonusPower;
+    GameObject downWall;*/
+  /*  float bonusPower = 10;*/
     float superModScaler = 1;
-    Vector3 vec;
+   // Vector3 vec;
 
    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        leftWall = GameObject.Find("frame/left");
+        frame = GameObject.Find("FrameSetter").GetComponent<Frame>();
+        /*leftWall = GameObject.Find("frame/left");
         rightWall = GameObject.Find("frame/right");
         upWall = GameObject.Find("frame/up");
-        downWall = GameObject.Find("frame/down");
+        downWall = GameObject.Find("frame/down");*/
 
         collSpawner = GameObject.FindObjectOfType<collectablesSpawner>();
        // collSpawner = GameObject.FindObjectOfType<collectablesSpawner>();
@@ -37,17 +38,15 @@ public class collectableTrigger : MonoBehaviour
         if (collision.gameObject.tag == playerTagName)
         {
             if (collision.gameObject.GetComponent<movePlayer>().isInSupermode())
+            {
                 superModScaler = 1.2f;
+            }
             else
+            {
                 superModScaler = 1f;
+            }
 
-            vec.x = bonusPower * 0.9f / 50 * superModScaler;
-            leftWall.transform.position = leftWall.transform.position - vec;
-            rightWall.transform.position = rightWall.transform.position + vec;
-            vec.x = 0;
-            vec.y = bonusPower * 1.6f / 50 * superModScaler;
-            upWall.transform.position = upWall.transform.position + vec;
-            downWall.transform.position = downWall.transform.position - vec;
+            frame.ThrowWallsAway(superModScaler);
 
             collSpawner.GetComponent<collectablesSpawner>().increeseCollectedThisGameBy(superModScaler);
             

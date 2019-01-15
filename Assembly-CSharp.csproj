@@ -65,13 +65,16 @@
     <Compile Include="Assets\scrips\animation and scene manage\animatorSetTrigger.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\eventSceneLoad.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\ResetTrigger.cs" />
+    <Compile Include="Assets\scrips\BackgroundScaler.cs" />
     <Compile Include="Assets\scrips\cube selection\BuyCube.cs" />
     <Compile Include="Assets\scrips\cube selection\collectablesTrack.cs" />
     <Compile Include="Assets\scrips\cube selection\cubeKeeper.cs" />
     <Compile Include="Assets\scrips\cube selection\cubes.cs" />
     <Compile Include="Assets\scrips\Don't needanimationScript.cs" />
     <Compile Include="Assets\scrips\figureMove.cs" />
+    <Compile Include="Assets\scrips\Frame.cs" />
     <Compile Include="Assets\scrips\joystick\joystickMove.cs" />
+    <Compile Include="Assets\scrips\KEYMANAGER.cs" />
     <Compile Include="Assets\scrips\loadingScreenAsyncSceneLoad.cs" />
     <Compile Include="Assets\scrips\loadSceneButton.cs" />
     <Compile Include="Assets\scrips\movePlayer.cs" />
@@ -83,7 +86,6 @@
     <Compile Include="Assets\scrips\sliderPlayerPrefs.cs" />
     <Compile Include="Assets\scrips\spawners\collectablesSpawner.cs" />
     <Compile Include="Assets\scrips\spawners\fullSpaceBonusSpawner.cs" />
-    <Compile Include="Assets\scrips\spawners\KEYMANAGER.cs" />
     <Compile Include="Assets\scrips\spawners\ObstaclesSpawner.cs" />
     <Compile Include="Assets\scrips\spawners\wallFreezeBonusSpawner.cs" />
     <Compile Include="Assets\scrips\timer.cs" />
