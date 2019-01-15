@@ -8,6 +8,7 @@ public class ObstaclesSpawner : MonoBehaviour
     private Camera mainCamera;
     private int obstaclesCount;
     private Transform[] allObstacles;
+    [SerializeField] Transform root;
 
     private void Start()
     {
@@ -74,28 +75,28 @@ public class ObstaclesSpawner : MonoBehaviour
                 {
                     Instantiate(obstacle, new Vector2(mainCamera.transform.position.x + 3.0f * mainCamera.orthographicSize,
                                                       Random.Range(mainCamera.transform.position.y - mainCamera.orthographicSize,
-                                                                   mainCamera.transform.position.y + mainCamera.orthographicSize)), Quaternion.identity);
+                                                                   mainCamera.transform.position.y + mainCamera.orthographicSize)), Quaternion.identity, root);
                     break;
                 }
             case (figureMove.Napr.right):
                 {
                     Instantiate(obstacle, new Vector2(mainCamera.transform.position.x - 3.0f * mainCamera.orthographicSize,
                                                      Random.Range(mainCamera.transform.position.y - mainCamera.orthographicSize,
-                                                                  mainCamera.transform.position.y + mainCamera.orthographicSize)), Quaternion.identity);
+                                                                  mainCamera.transform.position.y + mainCamera.orthographicSize)), Quaternion.identity, root);
                     break;
                 }
             case (figureMove.Napr.up):
                 {
                     Instantiate(obstacle, new Vector2(Random.Range(mainCamera.transform.position.x - mainCamera.orthographicSize,
                                                                    mainCamera.transform.position.x + mainCamera.orthographicSize),
-                                                     mainCamera.transform.position.y - 3.0f * mainCamera.orthographicSize), Quaternion.identity);
+                                                     mainCamera.transform.position.y - 3.0f * mainCamera.orthographicSize), Quaternion.identity, root);
                     break;
                 }
             case (figureMove.Napr.down):
                 {
                     Instantiate(obstacle, new Vector2(Random.Range(mainCamera.transform.position.x - mainCamera.orthographicSize,
                                                                    mainCamera.transform.position.x + mainCamera.orthographicSize),
-                                                     mainCamera.transform.position.y + 3.0f * mainCamera.orthographicSize), Quaternion.identity);
+                                                     mainCamera.transform.position.y + 3.0f * mainCamera.orthographicSize), Quaternion.identity, root);
                     break;
                 }
         }

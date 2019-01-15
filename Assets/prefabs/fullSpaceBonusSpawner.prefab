@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4022795236129756}
-  - component: {fileID: 114810211616747700}
+  - component: {fileID: 114580898352692134}
   m_Layer: 0
   m_Name: fullSpaceBonusSpawner
   m_TagString: Untagged
@@ -34,13 +34,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1245254354146740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.093426, y: -7.147984, z: -4.3090067}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114810211616747700
+--- !u!114 &114580898352692134
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,22 +48,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1245254354146740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d28c0ae885dbbca4598d3006e5abd112, type: 3}
+  m_Script: {fileID: 11500000, guid: 50fec4bfb42b3834ba7872537e3d5f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1.67
+  delay: 70.8
   bonus: {fileID: 1499835535728466, guid: ef79c52ccde804945b3d3082ed307ab9, type: 2}
-  mainCamera: {fileID: 0}
-  fullSpaceBonusCollected: 0
-  frame: {fileID: 1793527122602540, guid: f1ed5b7adfd771f4ba322321f9de58a1, type: 2}
-  collSpawner: {fileID: 0}
-  leftWall: {fileID: 0}
-  leftWallOldPos: {x: 0, y: 0, z: 0}
-  rightWall: {fileID: 0}
-  rightWallOldPos: {x: 0, y: 0, z: 0}
-  upWall: {fileID: 0}
-  upWallOldPos: {x: 0, y: 0, z: 0}
-  downWall: {fileID: 0}
-  downWallOldPos: {x: 0, y: 0, z: 0}
-  percent: 0
-  vec: {x: 0, y: 0, z: 0}
+  frame: {fileID: 0}
+  root: {fileID: 0}

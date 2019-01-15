@@ -54,3 +54,4 @@ MonoBehaviour:
   delay: 22.2
   bonus: {fileID: 1144987709263636, guid: d50da6a68d0a3ae4b814448ce926a3ed, type: 2}
   frame: {fileID: 0}
+  root: {fileID: 0}

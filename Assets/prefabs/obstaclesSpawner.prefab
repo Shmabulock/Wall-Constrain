@@ -51,6 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d82f93686ac7ce489992530b59aa05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1.18
   obstackles: {fileID: 1416422509769820, guid: b453c988af5932045a7715546023179c, type: 2}
-  mainCamera: {fileID: 0}
+  root: {fileID: 0}

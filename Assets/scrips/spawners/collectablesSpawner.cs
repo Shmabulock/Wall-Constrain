@@ -10,6 +10,7 @@ public class collectablesSpawner : MonoBehaviour
     public Camera mainCamera;
     private int bonusCount;
     private float collectedThisGame;
+    [SerializeField] Transform root;
 
     public enum  type {circle = 0,  fullSpaceBunus = 1}
 
@@ -54,7 +55,7 @@ public class collectablesSpawner : MonoBehaviour
         Instantiate(bonus, new Vector2(Random.Range(mainCamera.transform.position.x - mainCamera.orthographicSize,
                                                      mainCamera.transform.position.x + mainCamera.orthographicSize),
                                        Random.Range(mainCamera.transform.position.y - mainCamera.orthographicSize,
-                                                     mainCamera.transform.position.y + mainCamera.orthographicSize)), Quaternion.identity);
+                                                     mainCamera.transform.position.y + mainCamera.orthographicSize)), Quaternion.identity, root);
     }
     public void setBonusCount(int Count)
     {
