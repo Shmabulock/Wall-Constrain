@@ -59,6 +59,8 @@ public class Frame : MonoBehaviour {
     float timer = 0;
     float randTime;
 
+    [SerializeField] Transform gameOverTrigger;
+
     private void Awake()
     {
         GameObject newFrame = Instantiate(m_frame);
@@ -191,6 +193,19 @@ public class Frame : MonoBehaviour {
         m_downWall.transform.position += Vector3.down * bonusPower * superModScaler * y_ratio/50;
     }
 
-    
+    public void EndGame()
+    {
+       /* m_leftWall.GetComponent<SpriteRenderer>().enabled = false;
+        m_rightWall.GetComponent<SpriteRenderer>().enabled = false;
+        m_upWall.GetComponent<SpriteRenderer>().enabled = false;
+        m_downWall.GetComponent<SpriteRenderer>().enabled = false;*/
+
+        m_leftWall.transform.position = gameOverTrigger.position;
+        m_rightWall.transform.position = gameOverTrigger.position;
+        m_upWall.transform.position = gameOverTrigger.position;
+        m_downWall.transform.position = gameOverTrigger.position;
+
+    }
+
 
 }

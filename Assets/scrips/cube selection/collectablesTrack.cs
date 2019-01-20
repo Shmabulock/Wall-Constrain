@@ -25,7 +25,7 @@ public class collectablesTrack : MonoBehaviour {
             this.GetComponent<Text>().text = "x" + PlayerPrefs.GetFloat("collectablesCount").ToString("0");
         }
 
-    }
+    }// i know this is is not good :)
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

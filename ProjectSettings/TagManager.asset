@@ -7,6 +7,7 @@ TagManager:
   - Walls
   - collectables spawn
   - collectable
+  - Obstacles
   layers:
   - Default
   - TransparentFX
@@ -18,10 +19,10 @@ TagManager:
   - 
   - obstacles
   - player
-  - walls
+  - emotes
   - bonuses
   - camera
-  - emotes
+  - walls
   - 
   - 
   - 
