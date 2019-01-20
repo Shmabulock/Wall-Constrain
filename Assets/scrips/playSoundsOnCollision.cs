@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class playSoundsOnCollision : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class playSoundsOnCollision : MonoBehaviour
     AudioSource audioSource;
     [SerializeField]
     AudioClip clip;
+    
     string collisionTag = "collectable";
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,6 +21,7 @@ public class playSoundsOnCollision : MonoBehaviour
         {
             Debug.Log("played");
             audioSource.PlayOneShot(clip, PlayerPrefs.GetFloat(KEYMANAGER.SOUNDSKEY));
+            
         }
     }
 

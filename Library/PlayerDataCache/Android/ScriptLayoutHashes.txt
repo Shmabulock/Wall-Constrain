@@ -3,6 +3,7 @@ PlayerPath?
 F:/unity work/builded projects/gameandoid
 SceneListBegin?
 Assets/scenes/mainMenu.unity
+Assets/scenes/tutorial.unity
 Assets/scenes/options.unity
 Assets/scenes/cubeSelection.unity
 Assets/scenes/loadingScreenToGameplay.unity
