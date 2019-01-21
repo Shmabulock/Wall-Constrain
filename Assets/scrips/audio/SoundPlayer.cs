@@ -6,9 +6,9 @@ public class SoundPlayer : MonoBehaviour {
 
 	public static void PlaySound(AudioClip clip)
     {
-        if (PlayerPrefs.HasKey("soundsVolume"))
+        if (PlayerPrefs.HasKey(KEYMANAGER.SOUNDSKEY))
         { 
-            AudioSource.PlayClipAtPoint(clip, Vector3.zero, PlayerPrefs.GetFloat("soundsVolume"));
+            AudioSource.PlayClipAtPoint(clip, Vector3.zero, PlayerPrefs.GetFloat(KEYMANAGER.SOUNDSKEY));
         }
         else
         {

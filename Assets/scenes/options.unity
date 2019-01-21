@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55b23a204535bb4ebe0686c85db0ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: soundsVolume
+  forWhat: 1
 --- !u!1001 &296530069
 Prefab:
   m_ObjectHideFlags: 0
@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55b23a204535bb4ebe0686c85db0ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: musicVolume
+  forWhat: 0
 --- !u!1 &932991187
 GameObject:
   m_ObjectHideFlags: 0

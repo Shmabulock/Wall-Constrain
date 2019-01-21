@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class fullSpaceBonusTrigger : MonoBehaviour
 {
-    public string wallsTagName;
-    public string playerTagName;
+
     public GameObject frame;
     fullSpaceBonusSpawner spawner;
     GameObject leftWall;
@@ -23,11 +22,11 @@ public class fullSpaceBonusTrigger : MonoBehaviour
 
         spawner = GameObject.FindObjectOfType<fullSpaceBonusSpawner>();
 
-        if (collision.gameObject.tag == wallsTagName)
+        if (collision.gameObject.tag == TAGS.Walls)
         {
             Destroy(this.gameObject);
         }
-        if (collision.gameObject.tag == playerTagName)
+        if (collision.gameObject.tag == TAGS.Player)
         {
             // set bool collected true;
             playerCollected = true;

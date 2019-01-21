@@ -76,7 +76,7 @@ public class figureMove : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log("1 collision");
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == TAGS.Player)
         {
            // Debug.Log("2 tag player");
 

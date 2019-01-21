@@ -6,7 +6,7 @@ public class emoteNeutralTrigger : MonoBehaviour
 {
     public GameObject emotes;
     Transform[] theEmotes;
-    public string wallTagName;
+
     GameObject emoteHappy;
     GameObject emoteNeutral;
     GameObject emoteSad;
@@ -20,7 +20,7 @@ public class emoteNeutralTrigger : MonoBehaviour
         emoteSad = theEmotes[2].gameObject;
         emoteCrying = theEmotes[1].gameObject;
 
-        if (collision.gameObject.tag == wallTagName)
+        if (collision.gameObject.tag == TAGS.Walls)
         {
             emoteHappy.GetComponent<SpriteRenderer>().enabled = false;
             emoteNeutral.GetComponent<SpriteRenderer>().enabled = true;
@@ -37,7 +37,7 @@ public class emoteNeutralTrigger : MonoBehaviour
         emoteSad = theEmotes[2].gameObject;
         emoteCrying = theEmotes[1].gameObject;
 
-        if (collision.gameObject.tag == wallTagName)
+        if (collision.gameObject.tag == TAGS.Walls)
         {
             emoteHappy.GetComponent<SpriteRenderer>().enabled = true;
             emoteNeutral.GetComponent<SpriteRenderer>().enabled = false;

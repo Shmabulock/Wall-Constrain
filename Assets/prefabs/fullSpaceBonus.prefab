@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58851285853634806}
   - component: {fileID: 114526721813144448}
   - component: {fileID: 95004512148649574}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: fullSpaceBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 98cee1aa6d8c38948b2c956cc0cdce95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

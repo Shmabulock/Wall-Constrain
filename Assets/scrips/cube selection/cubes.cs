@@ -38,26 +38,26 @@ public class cubes : MonoBehaviour {
 
         for(int i = 0; i < numberOfCubes; i++)
         {
-            if (!PlayerPrefs.HasKey("cubeID" + i.ToString() + "isLocked"))
-                PlayerPrefs.SetString("cubeID" + i.ToString() + "isLocked", "true");
-            if (PlayerPrefs.HasKey("cubeID" + i.ToString() + "isLocked"))
+            if (!PlayerPrefs.HasKey(KEYMANAGER.CUBES.CUBE_ID + i.ToString() + KEYMANAGER.CUBES.IS_LOCKED))
+                PlayerPrefs.SetString(KEYMANAGER.CUBES.CUBE_ID + i.ToString() + KEYMANAGER.CUBES.IS_LOCKED, KEYMANAGER.CUBES.TRUE);
+            if (PlayerPrefs.HasKey(KEYMANAGER.CUBES.CUBE_ID + i.ToString() + KEYMANAGER.CUBES.IS_LOCKED))
             {
-                if(PlayerPrefs.GetString("cubeID" + i.ToString() + "isLocked") == "true")
+                if(PlayerPrefs.GetString(KEYMANAGER.CUBES.CUBE_ID + i.ToString() + KEYMANAGER.CUBES.IS_LOCKED) == KEYMANAGER.CUBES.TRUE)
                 {
-                    if (!PlayerPrefs.HasKey("cubeID" + i.ToString() + "price"))
-                        PlayerPrefs.SetInt("cubeID" + i.ToString() + "price", (i) * 500);
+                    if (!PlayerPrefs.HasKey(KEYMANAGER.CUBES.CUBE_ID + i.ToString() + KEYMANAGER.CUBES.PRICE))
+                        PlayerPrefs.SetInt(KEYMANAGER.CUBES.CUBE_ID + i.ToString() + KEYMANAGER.CUBES.PRICE, (i) * 500);
                 }
             }
                 allCubes[i].theCube = cubesGameObj.transform.GetChild(i).gameObject;
-            allCubes[i].isLocked = PlayerPrefs.GetString("cubeID" + i.ToString() + "isLocked") == "true" ? true : false;
+            allCubes[i].isLocked = PlayerPrefs.GetString(KEYMANAGER.CUBES.CUBE_ID + i.ToString() + KEYMANAGER.CUBES.IS_LOCKED) == KEYMANAGER.CUBES.TRUE ? true : false;
         }
-        PlayerPrefs.SetString("cubeID" + "0" + "isLocked", "false");
-        allCubes[0].isLocked = PlayerPrefs.GetString("cubeID" + "0" + "isLocked") == "true" ? true : false;
+        PlayerPrefs.SetString(KEYMANAGER.CUBES.CUBE_ID + "0" + KEYMANAGER.CUBES.IS_LOCKED, KEYMANAGER.CUBES.FALSE);
+        allCubes[0].isLocked = (PlayerPrefs.GetString(KEYMANAGER.CUBES.CUBE_ID + "0" + KEYMANAGER.CUBES.IS_LOCKED) == KEYMANAGER.CUBES.TRUE) ? true : false;
 
 
         isSwitching = false;
-        if (PlayerPrefs.HasKey("selected"))
-            selected = PlayerPrefs.GetInt("selected");
+        if (PlayerPrefs.HasKey(KEYMANAGER.CUBES.SELECTED))
+            selected = PlayerPrefs.GetInt(KEYMANAGER.CUBES.SELECTED);
         else
             selected = 0;
         change();
@@ -177,7 +177,7 @@ public class cubes : MonoBehaviour {
         this.GetComponent<Animator>().SetTrigger("increase");
         CubeNumber.text = selected+1 + "/" + numberOfCubes;
         
-        PlayerPrefs.SetInt("selected", selected);
+        PlayerPrefs.SetInt(KEYMANAGER.CUBES.SELECTED, selected);
 
     }
     public void resetTriggers()
@@ -200,7 +200,7 @@ public class cubes : MonoBehaviour {
             this.GetComponent<Image>().color = locked;
             BuyButton.SetActive(true);
             playButton.SetActive(false);
-            BuyButton.GetComponent<Transform>().GetChild(1).GetComponent<Text>().text = "X" + PlayerPrefs.GetInt("cubeID" + selected + "price").ToString();
+            BuyButton.GetComponent<Transform>().GetChild(1).GetComponent<Text>().text = "X" + PlayerPrefs.GetInt(KEYMANAGER.CUBES.CUBE_ID + selected + KEYMANAGER.CUBES.PRICE).ToString();
         }
         else
         {
@@ -209,10 +209,7 @@ public class cubes : MonoBehaviour {
             playButton.SetActive(true);
         }
     }
-    public void buySelectedCube()
-    {
-
-    }
+ 
 
     public int getSelected()
     {

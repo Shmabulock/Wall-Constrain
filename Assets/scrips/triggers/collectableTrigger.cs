@@ -6,8 +6,7 @@ using UnityEngine.Audio;
 
 public class collectableTrigger : MonoBehaviour
 {
-    public string wallsTagName;
-    public string playerTagName;
+   
     Frame frame;
     private collectablesSpawner collSpawner;
    /* GameObject leftWall;
@@ -32,11 +31,11 @@ public class collectableTrigger : MonoBehaviour
         collSpawner = GameObject.FindObjectOfType<collectablesSpawner>();
        // collSpawner = GameObject.FindObjectOfType<collectablesSpawner>();
 
-        if (collision.gameObject.tag == wallsTagName)
+        if (collision.gameObject.tag == TAGS.Walls)
         {
             Destroy(this.gameObject);
         }
-        if (collision.gameObject.tag == playerTagName)
+        if (collision.gameObject.tag == TAGS.Player)
         {
             if (collision.gameObject.GetComponent<movePlayer>().isInSupermode())
             {

@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class wallFreezeBonusTrigger : MonoBehaviour
 {
-    public string wallsTagName;
-    public string playerTagName;
+
   //  public GameObject frame;
    // public float freezeTime;
     wallFreezeBonusSpawner wallFreezeSpawner;
@@ -25,11 +24,11 @@ public class wallFreezeBonusTrigger : MonoBehaviour
         */
         wallFreezeSpawner = GameObject.FindObjectOfType<wallFreezeBonusSpawner>();
 
-        if (collision.gameObject.tag == wallsTagName)
+        if (collision.gameObject.tag == TAGS.Walls)
         {
             Destroy(this.gameObject);
         }
-        if (collision.gameObject.tag == playerTagName)
+        if (collision.gameObject.tag == TAGS.Player)
         {
             /*wallFreezeSpawner.GetComponent<wallFreezeBonusSpawner>().setHorizontalWallSpeed(leftWall.GetComponent<wallMove>().Speed);
             wallFreezeSpawner.GetComponent<wallFreezeBonusSpawner>().setVerticalWallSpeed(upWall.GetComponent<wallMove>().Speed);
