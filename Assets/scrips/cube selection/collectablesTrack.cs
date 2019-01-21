@@ -15,14 +15,14 @@ public class collectablesTrack : MonoBehaviour {
 
     private void Start()
     {
-        if (!PlayerPrefs.HasKey("collectablesCount"))
-            PlayerPrefs.SetFloat("collectablesCount", 0);
+        if (!PlayerPrefs.HasKey(KEYMANAGER.COLLECTABLES_COUNT))
+            PlayerPrefs.SetFloat(KEYMANAGER.COLLECTABLES_COUNT, 0);
     }
     private void FixedUpdate()
     {
-        if(SceneManager.GetActiveScene().name == "cubeSelection")
+        if(SceneManager.GetActiveScene().name == SCENE_NAMES.CubeSelection)
         {
-            this.GetComponent<Text>().text = "x" + PlayerPrefs.GetFloat("collectablesCount").ToString("0");
+            this.GetComponent<Text>().text = "x" + PlayerPrefs.GetFloat(KEYMANAGER.COLLECTABLES_COUNT).ToString("0");
         }
 
     }// i know this is is not good :)
@@ -31,14 +31,14 @@ public class collectablesTrack : MonoBehaviour {
     {
         if (collision.gameObject.tag == tagName)
         {
-            if (!PlayerPrefs.HasKey("collectablesCount"))
-                PlayerPrefs.SetFloat("collectablesCount", 0);
+            if (!PlayerPrefs.HasKey(KEYMANAGER.COLLECTABLES_COUNT))
+                PlayerPrefs.SetFloat(KEYMANAGER.COLLECTABLES_COUNT, 0);
             else
             {
                 if (!written)
                 {
                     //PlayerPrefs.SetFloat("collectablesCount", PlayerPrefs.GetFloat("collectablesCount") + collectablesSpawner.GetComponent<collectablesSpawner>().getCollectedThisGame());
-                    PlayerPrefs.SetFloat("collectablesCount", PlayerPrefs.GetFloat("collectablesCount") + spawner.getCollectedThisGame());
+                    PlayerPrefs.SetFloat(KEYMANAGER.COLLECTABLES_COUNT, PlayerPrefs.GetFloat(KEYMANAGER.COLLECTABLES_COUNT) + spawner.getCollectedThisGame());
 
                     written = true;
                 }

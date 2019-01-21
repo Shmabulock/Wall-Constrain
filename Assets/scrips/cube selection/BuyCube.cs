@@ -8,11 +8,11 @@ public class BuyCube : MonoBehaviour {
 	public void buySelectedCube()
     {
         int selectedID = cube.GetComponent<cubes>().getSelected();
-        if(PlayerPrefs.GetFloat("collectablesCount") >= PlayerPrefs.GetInt("cubeID" + selectedID.ToString() + "price"))
+        if(PlayerPrefs.GetFloat(KEYMANAGER.COLLECTABLES_COUNT) >= PlayerPrefs.GetInt(KEYMANAGER.CUBES.CUBE_ID + selectedID.ToString() + KEYMANAGER.CUBES.PRICE))
         {
             cube.GetComponent<cubes>().unlockSelectedCube(selectedID);
-            PlayerPrefs.SetString("cubeID" + selectedID.ToString() + "isLocked", "false");
-            PlayerPrefs.SetFloat("collectablesCount", PlayerPrefs.GetFloat("collectablesCount") - PlayerPrefs.GetInt("cubeID" + selectedID.ToString() + "price"));
+            PlayerPrefs.SetString(KEYMANAGER.CUBES.CUBE_ID + selectedID.ToString() + KEYMANAGER.CUBES.IS_LOCKED, KEYMANAGER.CUBES.FALSE);
+            PlayerPrefs.SetFloat(KEYMANAGER.COLLECTABLES_COUNT, PlayerPrefs.GetFloat(KEYMANAGER.COLLECTABLES_COUNT) - PlayerPrefs.GetInt(KEYMANAGER.CUBES.CUBE_ID + selectedID.ToString() + KEYMANAGER.CUBES.PRICE));
             cube.GetComponent<cubes>().checkAvailabilty();
         }
     }

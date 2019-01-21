@@ -18,9 +18,10 @@ public class cubeKeeper : MonoBehaviour {
     }
     private void Update()
     {
-        if(((SceneManager.GetActiveScene().name == "gameplay" && !wasInGameplay) || (SceneManager.GetActiveScene().name == "gameplay") && wasInGameover))
+        if((SceneManager.GetActiveScene().name == SCENE_NAMES.Gameplay && !wasInGameplay) || 
+            (SceneManager.GetActiveScene().name == SCENE_NAMES.Gameplay && wasInGameover))
         {
-            player = GameObject.FindWithTag("Player");
+            player = GameObject.FindWithTag(TAGS.Player);
                         
             player.GetComponent<SpriteRenderer>().sprite = sprite;
             player.GetComponent<SpriteRenderer>().material = material;
@@ -28,11 +29,11 @@ public class cubeKeeper : MonoBehaviour {
             wasInGameplay = true;
             wasInGameover = false;
         }
-        if (SceneManager.GetActiveScene().name == "cubeSelection" && wasInGameplay)
+        if (SceneManager.GetActiveScene().name == SCENE_NAMES.CubeSelection && wasInGameplay)
             Destroy(this.gameObject);
-        if (SceneManager.GetActiveScene().name == "gameOver")
+        if (SceneManager.GetActiveScene().name == SCENE_NAMES.GameOver)
             wasInGameover = true;
-        if (SceneManager.GetActiveScene().name == "loadingScreenToGameplay")
+        if (SceneManager.GetActiveScene().name == SCENE_NAMES.LoadingScreenToGameplay)
             wasInGameplay = false;
     }
 }

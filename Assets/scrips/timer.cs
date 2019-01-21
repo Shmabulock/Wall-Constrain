@@ -23,7 +23,7 @@ public class timer : MonoBehaviour {
         {
             if (TimerText.gameObject.activeSelf)
             {
-                if (Application.loadedLevelName == "gameplay")
+                if (Application.loadedLevelName == SCENE_NAMES.Gameplay)
                 {
 
                     myTimer += Time.deltaTime;
@@ -33,20 +33,20 @@ public class timer : MonoBehaviour {
                 }
             }
         }
-        if (Application.loadedLevelName == "gameOver")
+        if (Application.loadedLevelName == SCENE_NAMES.GameOver)
         {
             TimerText = GameObject.Find("score").GetComponent<Text>();
-            if (!PlayerPrefs.HasKey("Highscore"))
-                PlayerPrefs.SetFloat("Highscore", myTimer);
-            if(PlayerPrefs.GetFloat("Highscore") < myTimer)
-                PlayerPrefs.SetFloat("Highscore", myTimer);
+            if (!PlayerPrefs.HasKey(KEYMANAGER.HIGHSCORE))
+                PlayerPrefs.SetFloat(KEYMANAGER.HIGHSCORE, myTimer);
+            if(PlayerPrefs.GetFloat(KEYMANAGER.HIGHSCORE) < myTimer)
+                PlayerPrefs.SetFloat(KEYMANAGER.HIGHSCORE, myTimer);
             PlayerPrefs.Save();
 
-            TimerText.text = "Highscore: " + PlayerPrefs.GetFloat("Highscore").ToString("F") + "\n" + "Your time is: " + myTimer.ToString("F");
+            TimerText.text = "Highscore: " + PlayerPrefs.GetFloat(KEYMANAGER.HIGHSCORE).ToString("F") + "\n" + "Your time is: " + myTimer.ToString("F");
         }
             
         
-        if(Application.loadedLevelName != "gameplay")
+        if(Application.loadedLevelName != SCENE_NAMES.Gameplay)
             Destroy(this.gameObject);
         
     }
