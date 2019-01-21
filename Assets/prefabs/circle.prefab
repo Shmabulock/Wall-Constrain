@@ -89,8 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallsTagName: Walls
   playerTagName: Player
-  frame: {fileID: 1793527122602540, guid: f1ed5b7adfd771f4ba322321f9de58a1, type: 2}
-  bonusPower: 10
+  collectedClip: {fileID: 8300000, guid: 90d553f6d2b604743b591aee53c8ad94, type: 3}
 --- !u!212 &212103538114442848
 SpriteRenderer:
   m_ObjectHideFlags: 1

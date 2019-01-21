@@ -65,6 +65,8 @@
     <Compile Include="Assets\scrips\animation and scene manage\animatorSetTrigger.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\eventSceneLoad.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\ResetTrigger.cs" />
+    <Compile Include="Assets\scrips\audio\playSoundsOnCollision.cs" />
+    <Compile Include="Assets\scrips\audio\SoundPlayer.cs" />
     <Compile Include="Assets\scrips\BackgroundScaler.cs" />
     <Compile Include="Assets\scrips\cube selection\BuyCube.cs" />
     <Compile Include="Assets\scrips\cube selection\collectablesTrack.cs" />
@@ -80,7 +82,6 @@
     <Compile Include="Assets\scrips\movePlayer.cs" />
     <Compile Include="Assets\scrips\obastcleSquishGameFinisher.cs" />
     <Compile Include="Assets\scrips\pauseButton.cs" />
-    <Compile Include="Assets\scrips\playSoundsOnCollision.cs" />
     <Compile Include="Assets\scrips\quitButton.cs" />
     <Compile Include="Assets\scrips\resetGame.cs" />
     <Compile Include="Assets\scrips\resumeButton.cs" />

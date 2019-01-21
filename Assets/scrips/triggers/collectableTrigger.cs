@@ -16,7 +16,8 @@ public class collectableTrigger : MonoBehaviour
     GameObject downWall;*/
   /*  float bonusPower = 10;*/
     float superModScaler = 1;
-   // Vector3 vec;
+    // Vector3 vec;
+    [SerializeField] AudioClip collectedClip;
 
    
 
@@ -49,6 +50,8 @@ public class collectableTrigger : MonoBehaviour
             frame.ThrowWallsAway(superModScaler);
 
             collSpawner.GetComponent<collectablesSpawner>().increeseCollectedThisGameBy(superModScaler);
+
+            SoundPlayer.PlaySound(collectedClip);
             
             Destroy(this.gameObject);
         }
