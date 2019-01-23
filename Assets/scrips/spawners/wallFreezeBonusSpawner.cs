@@ -61,7 +61,7 @@ public class wallFreezeBonusSpawner : MonoBehaviour
         while (true)
         {
           //  delay += Random.Range(-20, 20);
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(delay + Random.Range(-20, 20));
             if (!wallFreezeBonusCollected)
             {
                 addBonus(bonus);

@@ -279,7 +279,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emotes: {fileID: 1943810360129038}
-  wallTagName: Walls
 --- !u!114 &114409184625225852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,7 +291,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emotes: {fileID: 1943810360129038}
-  wallTagName: Walls
 --- !u!114 &114482616646097982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,7 +303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emotes: {fileID: 1943810360129038}
-  wallTagName: Walls
 --- !u!114 &114597657369108828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,7 +315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emotes: {fileID: 1943810360129038}
-  wallTagName: Walls
 --- !u!212 &212427889662274256
 SpriteRenderer:
   m_ObjectHideFlags: 1

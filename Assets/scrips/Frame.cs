@@ -60,6 +60,8 @@ public class Frame : MonoBehaviour {
     float randTime;
 
     [SerializeField] Transform gameOverTrigger;
+    [SerializeField] wallFreezeBonusSpawner wallFreezeSpawner;
+    [SerializeField] AudioClip wallFreezeEnd;
 
     private void Awake()
     {
@@ -139,7 +141,7 @@ public class Frame : MonoBehaviour {
             }
         }
         else
-        {
+        {//freeze BONUS
 
             if(timer  < 3f +randTime)
             {
@@ -147,15 +149,16 @@ public class Frame : MonoBehaviour {
             }
             else
             {
-                isWallFreezeBonusCollected = false;
+                wallFreezeSpawner.setBonusCollected(false);
+                SoundPlayer.PlaySound(wallFreezeEnd);
                 timer = 0;
                 randTime = Random.Range(-1f, 1f);
             }
-        }
+        }//freeze BONUS
 
-        ////
 
-        {
+
+        {// for full space bonus;
             if (!isFullSpaceBonusCollected)
             {
                 leftWallOldPos = m_leftWall.transform.position;
