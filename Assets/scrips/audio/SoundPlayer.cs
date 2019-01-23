@@ -8,11 +8,11 @@ public class SoundPlayer : MonoBehaviour {
     {
         if (PlayerPrefs.HasKey(KEYMANAGER.SOUNDSKEY))
         { 
-            AudioSource.PlayClipAtPoint(clip, Vector3.zero, PlayerPrefs.GetFloat(KEYMANAGER.SOUNDSKEY) - Random.Range(0.0f, 0.1f));
+            AudioSource.PlayClipAtPoint(clip, Camera.current.transform.position, PlayerPrefs.GetFloat(KEYMANAGER.SOUNDSKEY) - Random.Range(0.0f, 0.1f));
         }
         else
         {
-            AudioSource.PlayClipAtPoint(clip, Vector3.zero, 1.0f - Random.Range(0.0f, 0.1f));
+            AudioSource.PlayClipAtPoint(clip, Camera.current.transform.position, 1.0f - Random.Range(0.0f, 0.1f));
         }
     }
     public void PlaySoundFromAudioSource()//
@@ -28,6 +28,6 @@ public class SoundPlayer : MonoBehaviour {
         }
         source.pitch = 1.0f + Random.Range(-0.05f, 0.05f);
         //if(!source.isPlaying)
-            source.Play();
+        source.Play();
     }
 }

@@ -11,6 +11,7 @@ public class collectablesSpawner : MonoBehaviour
     private int bonusCount;
     private float collectedThisGame;
     [SerializeField] Transform root;
+    [SerializeField] AudioSource source;
 
     public enum  type {circle = 0,  fullSpaceBunus = 1}
 
@@ -72,5 +73,20 @@ public class collectablesSpawner : MonoBehaviour
     public float getCollectedThisGame()
     {
         return collectedThisGame;
+    }
+    public void PlayCollectableSound()
+    {
+        AudioSource source = this.GetComponent<AudioSource>();
+        if (PlayerPrefs.HasKey(KEYMANAGER.SOUNDSKEY))
+        {
+            source.volume = PlayerPrefs.GetFloat(KEYMANAGER.SOUNDSKEY) - Random.Range(0.0f, 0.1f);
+        }
+        else
+        {
+            source.volume = 1.0f - Random.Range(0.0f, 0.1f);
+        }
+        source.pitch = 1.0f + Random.Range(-0.05f, 0.05f);
+        //if(!source.isPlaying)
+        source.Play();
     }
 }

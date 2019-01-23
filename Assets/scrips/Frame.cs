@@ -60,6 +60,7 @@ public class Frame : MonoBehaviour {
     float randTime;
 
     [SerializeField] Transform gameOverTrigger;
+
     [SerializeField] wallFreezeBonusSpawner wallFreezeSpawner;
     [SerializeField] AudioClip wallFreezeEnd;
 
@@ -209,6 +210,9 @@ public class Frame : MonoBehaviour {
         m_downWall.transform.position = gameOverTrigger.position;
 
     }
+    public void PlayCollectableSound()
+    {
 
+    }
 
 }
