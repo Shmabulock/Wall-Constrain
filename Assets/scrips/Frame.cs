@@ -62,7 +62,6 @@ public class Frame : MonoBehaviour {
     [SerializeField] Transform gameOverTrigger;
 
     [SerializeField] wallFreezeBonusSpawner wallFreezeSpawner;
-    [SerializeField] AudioClip wallFreezeEnd;
 
     private void Awake()
     {
@@ -151,7 +150,7 @@ public class Frame : MonoBehaviour {
             else
             {
                 wallFreezeSpawner.setBonusCollected(false);
-                SoundPlayer.PlaySound(wallFreezeEnd);
+                wallFreezeSpawner.PlayWallFreezeEnd();
                 timer = 0;
                 randTime = Random.Range(-1f, 1f);
             }

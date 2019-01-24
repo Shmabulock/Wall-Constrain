@@ -11,17 +11,20 @@ public class collectablesSpawner : MonoBehaviour
     private int bonusCount;
     private float collectedThisGame;
     [SerializeField] Transform root;
-    [SerializeField] AudioSource source;
+    AudioSource source;
 
-    public enum  type {circle = 0,  fullSpaceBunus = 1}
+   // public enum  type {circle = 0,  fullSpaceBunus = 1}
 
-    public type type1;
+  //  public type type1;
 
 
     private void Start()
     {
         bonusCount = 0;
         StartCoroutine(Spawn(delay));
+        source = this.GetComponent<AudioSource>();
+        source.clip.LoadAudioData();
+
     }
     private void FixedUpdate()
     {

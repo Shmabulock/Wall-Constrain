@@ -41,7 +41,7 @@ public class wallFreezeBonusTrigger : MonoBehaviour
             downWall.GetComponent<wallMove>().Speed = 0;*/
 
             wallFreezeSpawner.setBonusCollected(true);
-            SoundPlayer.PlaySound(WallFreezeStartClip);
+            wallFreezeSpawner.PlayWallFreezeStart();
 
             Destroy(this.gameObject);
         }
