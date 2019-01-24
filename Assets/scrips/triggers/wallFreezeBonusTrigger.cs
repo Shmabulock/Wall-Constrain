@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 public class wallFreezeBonusTrigger : MonoBehaviour
 {
 
-  //  public GameObject frame;
-   // public float freezeTime;
+    //  public GameObject frame;
+    // public float freezeTime;
     wallFreezeBonusSpawner wallFreezeSpawner;
-   /* GameObject leftWall;
-    GameObject rightWall;
-    GameObject upWall;
-    GameObject downWall;*/
+    /* GameObject leftWall;
+     GameObject rightWall;
+     GameObject upWall;
+     GameObject downWall;*/
+
+    [SerializeField] AudioClip WallFreezeStartClip;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,6 +41,7 @@ public class wallFreezeBonusTrigger : MonoBehaviour
             downWall.GetComponent<wallMove>().Speed = 0;*/
 
             wallFreezeSpawner.setBonusCollected(true);
+            wallFreezeSpawner.PlayWallFreezeStart();
 
             Destroy(this.gameObject);
         }

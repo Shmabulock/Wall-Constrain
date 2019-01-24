@@ -12,6 +12,10 @@ public class wallFreezeBonusSpawner : MonoBehaviour
 
     [SerializeField] Frame frame;
     [SerializeField] Transform root;
+
+    [SerializeField] AudioClip WallFreezeStartClip;
+    [SerializeField] AudioClip WallFreezeEndClip;
+    AudioSource source;
   /*  GameObject leftWall;   
     GameObject rightWall;   
     GameObject upWall;
@@ -25,13 +29,15 @@ public class wallFreezeBonusSpawner : MonoBehaviour
 
     private void Start()
     {
+        source = this.GetComponent<AudioSource>();
        /* leftWall = GameObject.Find("frame/left");
         rightWall = GameObject.Find("frame/right");      
         upWall = GameObject.Find("frame/up");
         downWall = GameObject.Find("frame/down");*/
         mainCamera = Camera.main;
-       // wallFreezeBonusCollected = false;
-
+        // wallFreezeBonusCollected = false;
+        WallFreezeEndClip.LoadAudioData();
+        WallFreezeStartClip.LoadAudioData();
         StartCoroutine(Spawn(delay));
        // StartCoroutine(unfreezeWalls(freezeTime));
 
@@ -61,7 +67,7 @@ public class wallFreezeBonusSpawner : MonoBehaviour
         while (true)
         {
           //  delay += Random.Range(-20, 20);
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(delay + Random.Range(-20, 20));
             if (!wallFreezeBonusCollected)
             {
                 addBonus(bonus);
@@ -81,6 +87,26 @@ public class wallFreezeBonusSpawner : MonoBehaviour
     {
         frame.IsWallFreezeBonusCollected = a;
         wallFreezeBonusCollected = a;
+    }
+
+    public void PlayWallFreezeStart()
+    {
+        if(!source.isPlaying)
+        {
+            source.clip = WallFreezeStartClip;
+            source.Play();
+            Debug.Log("clipStart");
+        }
+    }
+    public void PlayWallFreezeEnd()
+    {
+        if (!source.isPlaying)
+        {
+            source.clip = WallFreezeEndClip;
+            source.Play();
+            Debug.Log("clipStop");
+
+        }
     }
    /* public void setHorizontalWallSpeed(float speed)
     {

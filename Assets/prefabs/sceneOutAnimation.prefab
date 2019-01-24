@@ -22,7 +22,9 @@ GameObject:
   - component: {fileID: 222129654154542496}
   - component: {fileID: 114578631176802590}
   - component: {fileID: 95756556201660026}
-  - component: {fileID: 114818324260558230}
+  - component: {fileID: 114530199132754496}
+  - component: {fileID: 114678915946893556}
+  - component: {fileID: 114404301823987250}
   m_Layer: 5
   m_Name: sceneOutAnimation
   m_TagString: Untagged
@@ -41,13 +43,35 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7b683ecee9d5edd43af542bf3090b953, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114404301823987250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1687514209386492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae6f5a71ad333a4982a0da24b98d502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114530199132754496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1687514209386492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae6f5a71ad333a4982a0da24b98d502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114578631176802590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,7 +91,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 99964b317e68c174d941d6f319ad1d75, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -75,7 +99,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114818324260558230
+--- !u!114 &114678915946893556
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,12 +107,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1687514209386492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a68833e1f83ba4f8a633babd761e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 222a3aff6bea76c42b6c31bbdbeccec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1687514209386492}
-  triggerName: 
-  sceneName: gameplay
+  timerText: {fileID: 0}
 --- !u!222 &222129654154542496
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -102,7 +124,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1687514209386492}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
@@ -111,6 +133,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -447, y: -62.999996}
+  m_AnchoredPosition: {x: 93, y: 897}
   m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}

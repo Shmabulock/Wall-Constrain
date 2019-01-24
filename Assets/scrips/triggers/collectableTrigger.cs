@@ -16,7 +16,7 @@ public class collectableTrigger : MonoBehaviour
   /*  float bonusPower = 10;*/
     float superModScaler = 1;
     // Vector3 vec;
-    [SerializeField] AudioClip collectedClip;
+   // [SerializeField] AudioClip collectedClip;
 
    
 
@@ -50,7 +50,7 @@ public class collectableTrigger : MonoBehaviour
 
             collSpawner.GetComponent<collectablesSpawner>().increeseCollectedThisGameBy(superModScaler);
 
-            SoundPlayer.PlaySound(collectedClip);
+            collSpawner.PlayCollectableSound();
             
             Destroy(this.gameObject);
         }
