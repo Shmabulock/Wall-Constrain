@@ -23,7 +23,7 @@ public class timer : MonoBehaviour {
         {
             if (TimerText.gameObject.activeSelf)
             {
-                if (Application.loadedLevelName == SCENE_NAMES.Gameplay)
+                if (SceneManager.GetActiveScene().name == SCENE_NAMES.Gameplay)
                 {
 
                     myTimer += Time.deltaTime;
@@ -33,7 +33,7 @@ public class timer : MonoBehaviour {
                 }
             }
         }
-        if (Application.loadedLevelName == SCENE_NAMES.GameOver)
+        if (SceneManager.GetActiveScene().name == SCENE_NAMES.GameOver)
         {
             TimerText = GameObject.Find("score").GetComponent<Text>();
             if (!PlayerPrefs.HasKey(KEYMANAGER.HIGHSCORE))
@@ -46,7 +46,7 @@ public class timer : MonoBehaviour {
         }
             
         
-        if(Application.loadedLevelName != SCENE_NAMES.Gameplay)
+        if(SceneManager.GetActiveScene().name != SCENE_NAMES.Gameplay)
             Destroy(this.gameObject);
         
     }

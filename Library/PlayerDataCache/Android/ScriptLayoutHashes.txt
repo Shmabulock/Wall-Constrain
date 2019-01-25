@@ -29,7 +29,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 e196bd1cef9192dc76a50c62568f4d0c Assembly-CSharp.dll:.cubes
 f6637497451c9a030c421de4a1ad5cdb Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 b14b4630cc47b6e9ea8a644551a6a8cc Unity.TextMeshPro.dll:TMPro.TMP_Text
-82cff135d20921689a716afd13501c58 Assembly-CSharp.dll:.collectablesSpawner
+e0314f15eda1bbca7ea2a26f9535e43c Assembly-CSharp.dll:.collectablesSpawner
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 486cd95c82d8305219c352c06b776e1f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 da2091a04d360891450faf16cdf621f1 UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -190,12 +190,13 @@ aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 3399c3262d22a8c3adc0eac64d5c95b8 Assembly-CSharp.dll:.cubeKeeper
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.BackgroundScaler
+ee5c99edeacc5469eb53c66601179f00 Assembly-CSharp.dll:.MusicForGameplay
 e36aea28ba4663ba7df71df4d55f1403 Assembly-CSharp.dll:.pauseButton
 8f7ac6ae590a0d7988911d874d25bf7d Assembly-CSharp.dll:.wallMove
 e91cc90cf72e43d932b87298ff3d751f Assembly-CSharp.dll:.emoteNeutralTrigger
-78db578a594c2fe3fae932fd39ae2eab Assembly-CSharp.dll:.Frame
+749c30a31149a1af29d8fa4b9cf37a53 Assembly-CSharp.dll:.Frame
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
-2306fb5bb59b950fb668651470db4e30 Assembly-CSharp.dll:.wallFreezeBonusSpawner
+665cdbca1c3e3566a97a84ec7955981e Assembly-CSharp.dll:.wallFreezeBonusSpawner
 db5da181564e83e4f80e1971380d0496 Assembly-CSharp.dll:.joystickMove
 a1104f2713e45b61ceea626b762e14d9 Assembly-CSharp.dll:.obastcleSquishGameFinisher
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
@@ -205,3 +206,4 @@ eb78b8a08a5b15a5da16e646b6e3b860 Assembly-CSharp.dll:.wallFreezeBonusTrigger
 2306fb5bb59b950fb668651470db4e30 Assembly-CSharp.dll:.fullSpaceBonusSpawner
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ResetTrigger
 fc94ea207f632e6e4bd7cc1344e8b86c Assembly-CSharp.dll:.activateTimer
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.AudioSourceMusicVolumeController

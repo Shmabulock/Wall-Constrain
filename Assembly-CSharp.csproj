@@ -65,6 +65,7 @@
     <Compile Include="Assets\scrips\animation and scene manage\animatorSetTrigger.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\eventSceneLoad.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\ResetTrigger.cs" />
+    <Compile Include="Assets\scrips\audio\AudioSourceMusicVolumeController.cs" />
     <Compile Include="Assets\scrips\audio\MusicForGameplay.cs" />
     <Compile Include="Assets\scrips\audio\SoundPlayer.cs" />
     <Compile Include="Assets\scrips\BackgroundScaler.cs" />
