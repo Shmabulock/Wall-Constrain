@@ -189,6 +189,7 @@ aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.SoundPlayer
 3399c3262d22a8c3adc0eac64d5c95b8 Assembly-CSharp.dll:.cubeKeeper
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.AudioSourceMusicVolumeController
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.BackgroundScaler
 ee5c99edeacc5469eb53c66601179f00 Assembly-CSharp.dll:.MusicForGameplay
 e36aea28ba4663ba7df71df4d55f1403 Assembly-CSharp.dll:.pauseButton
@@ -206,4 +207,3 @@ eb78b8a08a5b15a5da16e646b6e3b860 Assembly-CSharp.dll:.wallFreezeBonusTrigger
 2306fb5bb59b950fb668651470db4e30 Assembly-CSharp.dll:.fullSpaceBonusSpawner
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ResetTrigger
 fc94ea207f632e6e4bd7cc1344e8b86c Assembly-CSharp.dll:.activateTimer
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.AudioSourceMusicVolumeController

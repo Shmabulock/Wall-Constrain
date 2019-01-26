@@ -91,6 +91,7 @@
     <Compile Include="Assets\scrips\spawners\fullSpaceBonusSpawner.cs" />
     <Compile Include="Assets\scrips\spawners\ObstaclesSpawner.cs" />
     <Compile Include="Assets\scrips\spawners\wallFreezeBonusSpawner.cs" />
+    <Compile Include="Assets\scrips\Test.cs" />
     <Compile Include="Assets\scrips\timer.cs" />
     <Compile Include="Assets\scrips\triggers\collectableTrigger.cs" />
     <Compile Include="Assets\scrips\triggers\emoteCryingTrigger.cs" />
