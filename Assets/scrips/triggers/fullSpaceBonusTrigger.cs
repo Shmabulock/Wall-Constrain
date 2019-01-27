@@ -31,6 +31,7 @@ public class fullSpaceBonusTrigger : MonoBehaviour
             // set bool collected true;
             playerCollected = true;
             Destroy(this.gameObject);
+            spawner.PlayFullSpaceStart();
         }
     }
     private void OnDestroy()

@@ -76,6 +76,7 @@
     <Compile Include="Assets\scrips\cube selection\collectablesTrack.cs" />
     <Compile Include="Assets\scrips\cube selection\cubeKeeper.cs" />
     <Compile Include="Assets\scrips\cube selection\cubes.cs" />
+    <Compile Include="Assets\scrips\DestroyObstacklesNotInTrugger.cs" />
     <Compile Include="Assets\scrips\Don't needanimationScript.cs" />
     <Compile Include="Assets\scrips\figureMove.cs" />
     <Compile Include="Assets\scrips\Frame.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\scrips\movePlayer.cs" />
     <Compile Include="Assets\scrips\obastcleSquishGameFinisher.cs" />
     <Compile Include="Assets\scrips\pauseButton.cs" />
+    <Compile Include="Assets\scrips\phoneBackButton.cs" />
     <Compile Include="Assets\scrips\quitButton.cs" />
     <Compile Include="Assets\scrips\resetGame.cs" />
     <Compile Include="Assets\scrips\resumeButton.cs" />

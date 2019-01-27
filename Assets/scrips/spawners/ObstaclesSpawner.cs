@@ -110,4 +110,5 @@ public class ObstaclesSpawner : MonoBehaviour
     {
         return obstaclesCount;
     }
+
 }

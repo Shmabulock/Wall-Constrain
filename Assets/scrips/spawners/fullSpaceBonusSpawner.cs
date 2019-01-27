@@ -10,10 +10,15 @@ public class fullSpaceBonusSpawner : MonoBehaviour
     Camera mainCamera;
     [SerializeField] Frame frame;
     [SerializeField] Transform root;
+     AudioSource source;
+    [SerializeField] AudioClip FullSpaceClip;
+
 
 
     private void Start()
     {
+        FullSpaceClip.LoadAudioData();
+        source = this.GetComponent<AudioSource>();
         mainCamera = Camera.main;
 
         StartCoroutine(Spawn(delay));
@@ -39,5 +44,21 @@ public class fullSpaceBonusSpawner : MonoBehaviour
     public void setBonusCollected(bool a)
     {
         frame.IsFullSpaceBonusCollected = a;
+    }
+    public void PlayFullSpaceStart()
+    {
+        if (!source.isPlaying)
+        {
+            if(PlayerPrefs.HasKey(KEYMANAGER.SOUNDSKEY))
+            {
+                source.volume = PlayerPrefs.GetFloat(KEYMANAGER.SOUNDSKEY);
+            }
+            else
+            {
+                source.volume = 1.0f;
+            }
+            source.clip = FullSpaceClip;
+            source.Play();
+        }
     }
 }
