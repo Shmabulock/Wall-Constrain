@@ -154,7 +154,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &31492537 stripped
 RectTransform:
@@ -6746,7 +6746,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4621088772196544, guid: 6525451a508483e40a3f1f73c467fd58, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114698021173266576, guid: 6525451a508483e40a3f1f73c467fd58,
         type: 2}
