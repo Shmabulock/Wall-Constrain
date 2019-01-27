@@ -13,7 +13,8 @@ public class fullSpaceBonusTrigger : MonoBehaviour
     GameObject upWall;
     GameObject downWall;
     private bool playerCollected = false;
-    Vector3 vec;
+
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)

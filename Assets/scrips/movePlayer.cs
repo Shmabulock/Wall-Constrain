@@ -41,7 +41,7 @@ public class movePlayer: MonoBehaviour
         diff = (this.transform.position - lastPos).normalized;
         torque = lastDiff.x * diff.y - lastDiff.y * diff.x;
 
-        rb.AddTorque(-1*torque/100, ForceMode2D.Impulse);
+        rb.AddTorque(-1 * torque / 100, ForceMode2D.Impulse);
 
         if (Mathf.Abs(rb.angularVelocity) > 1500f)
         {

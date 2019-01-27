@@ -7,8 +7,9 @@ public class MusicForGameplay : MonoBehaviour
 
     [SerializeField] AudioClip musicPart1;
     [SerializeField] AudioClip musicPart2;
-    AudioSource source;
-    int partPlaying;
+    public AudioSource source;
+
+    public int partPlaying;
     bool once = true;
     // Use this for initialization
     private void Awake()

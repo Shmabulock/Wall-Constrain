@@ -83,6 +83,7 @@ public class figureMove : MonoBehaviour
             {
            //     Debug.Log("3 angVel > 700f");
                 collision.rigidbody.angularVelocity /= 4;
+                spawner.spawnNCollectables(collision.transform.position, (int)Random.Range(5, 10));
                 Destroy(this.gameObject);
             }
           

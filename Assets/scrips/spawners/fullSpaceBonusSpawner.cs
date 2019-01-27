@@ -28,8 +28,7 @@ public class fullSpaceBonusSpawner : MonoBehaviour
     {
         while (true)
         {
-            delay += Random.Range(-20, 20);
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(delay + Random.Range(-20, 20));
             addBonus(bonus);
         }
 
