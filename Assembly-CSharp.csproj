@@ -103,7 +103,6 @@
     <Compile Include="Assets\scrips\triggers\emoteSadTrigger.cs" />
     <Compile Include="Assets\scrips\triggers\fullSpaceBonusTrigger.cs" />
     <Compile Include="Assets\scrips\triggers\loadSceneTrigger.cs" />
-    <Compile Include="Assets\scrips\triggers\OnCameraEksit.cs" />
     <Compile Include="Assets\scrips\triggers\wallFreezeBonusTrigger.cs" />
     <Compile Include="Assets\scrips\wallMove.cs" />
     <Reference Include="UnityEditor.StandardEvents">

@@ -10,6 +10,11 @@ public class SlidesController : MonoBehaviour {
     [SerializeField] Button buttonLeft;
     [SerializeField] Button buttonRight;
 
+    bool isSwiping = false;
+    float delta = 0;
+    Vector2 touchSwipeStartPos;
+    float swipelength = Screen.width/3.0f;
+
     public static Animator [] allSlides;
 
     int NumberOfSlides;
@@ -26,6 +31,41 @@ public class SlidesController : MonoBehaviour {
             allSlides[i].gameObject.SetActive(false);
         }
         allSlides[selected].gameObject.SetActive(true);
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.touchCount >= 1)
+        {
+            if (!isSwiping)
+            {
+                isSwiping = true;
+                delta = 0;
+                touchSwipeStartPos = Input.GetTouch(0).position;
+            }
+            else
+            {
+                delta = Input.GetTouch(0).position.x - touchSwipeStartPos.x;
+                if (Mathf.Abs(delta) > swipelength)
+                {
+                    delta = Mathf.Sign(delta);
+                    if (delta < 0)
+                    {
+                        LoadRight();
+                        isSwiping = false;
+                    }
+                    else
+                    {
+                        LoadLeft();
+                        isSwiping = false;
+
+                    }
+                }
+
+            }
+        }
+        else
+            isSwiping = false;
     }
 
     public void LoadLeft()

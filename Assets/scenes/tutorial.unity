@@ -1140,7 +1140,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1895074429757396, guid: 10740f0c74df40f46a46677aa75def66, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10740f0c74df40f46a46677aa75def66, type: 2}
@@ -6696,6 +6696,26 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224812961279279562, guid: bd960a0c6a8533945a453d5c58e75863,
     type: 2}
   m_PrefabInternal: {fileID: 1828594314}
+--- !u!223 &1143929642
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1143929636}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &1169086047
 GameObject:
   m_ObjectHideFlags: 0
@@ -12998,17 +13018,17 @@ Prefab:
     - target: {fileID: 224812961279279562, guid: bd960a0c6a8533945a453d5c58e75863,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224812961279279562, guid: bd960a0c6a8533945a453d5c58e75863,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224812961279279562, guid: bd960a0c6a8533945a453d5c58e75863,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224812961279279562, guid: bd960a0c6a8533945a453d5c58e75863,
         type: 2}
@@ -13072,7 +13092,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1202833220372338, guid: bd960a0c6a8533945a453d5c58e75863, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224812961279279562, guid: bd960a0c6a8533945a453d5c58e75863,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd960a0c6a8533945a453d5c58e75863, type: 2}
