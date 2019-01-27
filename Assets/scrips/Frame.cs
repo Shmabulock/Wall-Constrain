@@ -209,9 +209,5 @@ public class Frame : MonoBehaviour {
         m_downWall.transform.position = gameOverTrigger.position;
 
     }
-    public void PlayCollectableSound()
-    {
-
-    }
 
 }

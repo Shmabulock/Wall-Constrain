@@ -9,6 +9,12 @@ public class SlidesController : MonoBehaviour {
     Vector3 OUT_SCENE_POS_LEFT = new Vector3(-1105.0f, -305.0f, 10.0f);
     [SerializeField] Button buttonLeft;
     [SerializeField] Button buttonRight;
+    [SerializeField] Text slideNumber;
+
+    bool isSwiping = false;
+    float delta = 0;
+    Vector2 touchSwipeStartPos;
+    float swipelength = Screen.width/3.0f;
 
     public static Animator [] allSlides;
 
@@ -26,6 +32,43 @@ public class SlidesController : MonoBehaviour {
             allSlides[i].gameObject.SetActive(false);
         }
         allSlides[selected].gameObject.SetActive(true);
+
+        slideNumber.text = (selected + 1).ToString() + "/" + NumberOfSlides;
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.touchCount >= 1)
+        {
+            if (!isSwiping)
+            {
+                isSwiping = true;
+                delta = 0;
+                touchSwipeStartPos = Input.GetTouch(0).position;
+            }
+            else
+            {
+                delta = Input.GetTouch(0).position.x - touchSwipeStartPos.x;
+                if (Mathf.Abs(delta) > swipelength)
+                {
+                    delta = Mathf.Sign(delta);
+                    if (delta < 0)
+                    {
+                        LoadRight();
+                        isSwiping = false;
+                    }
+                    else
+                    {
+                        LoadLeft();
+                        isSwiping = false;
+
+                    }
+                }
+
+            }
+        }
+        else
+            isSwiping = false;
     }
 
     public void LoadLeft()
@@ -38,9 +81,13 @@ public class SlidesController : MonoBehaviour {
             }
             GoFromSceneToRight(allSlides[selected]);
             selected--;
+
             allSlides[selected].gameObject.transform.position = OUT_SCENE_POS_LEFT;
             allSlides[selected].gameObject.SetActive(true);
+
             GoOnSceneFromleft(allSlides[selected]);
+
+            slideNumber.text = (selected + 1).ToString() + "/" + NumberOfSlides;
         }
         else
             buttonLeft.enabled = false;
@@ -61,6 +108,8 @@ public class SlidesController : MonoBehaviour {
             allSlides[selected].gameObject.SetActive(true);
 
             GoOnSceneFromRight(allSlides[selected]);
+
+            slideNumber.text = (selected + 1).ToString() + "/" + NumberOfSlides;
         }
         else
         {

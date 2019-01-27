@@ -55,7 +55,6 @@ public class figureMove : MonoBehaviour
         moveVec.x = x * Speed * Time.fixedDeltaTime;
         moveVec.y = y * Speed * Time.fixedDeltaTime;
         moveVec.z = 0;
-        Destroy(this.gameObject, destroyDelay);
     }
 
     void FixedUpdate()
@@ -88,6 +87,7 @@ public class figureMove : MonoBehaviour
             }
           
         }
+
     }
     public Napr GetNapr()
     {

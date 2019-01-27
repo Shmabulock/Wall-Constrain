@@ -91,8 +91,17 @@ public class wallFreezeBonusSpawner : MonoBehaviour
 
     public void PlayWallFreezeStart()
     {
+
         if(!source.isPlaying)
         {
+            if (PlayerPrefs.HasKey(KEYMANAGER.SOUNDSKEY))
+            {
+                source.volume = PlayerPrefs.GetFloat(KEYMANAGER.SOUNDSKEY);
+            }
+            else
+            {
+                source.volume = 1.0f;
+            }
             source.clip = WallFreezeStartClip;
             source.Play();
             Debug.Log("clipStart");
@@ -100,13 +109,17 @@ public class wallFreezeBonusSpawner : MonoBehaviour
     }
     public void PlayWallFreezeEnd()
     {
-        if (!source.isPlaying)
+        if (PlayerPrefs.HasKey(KEYMANAGER.SOUNDSKEY))
         {
-            source.clip = WallFreezeEndClip;
-            source.Play();
-            Debug.Log("clipStop");
-
+            source.volume = PlayerPrefs.GetFloat(KEYMANAGER.SOUNDSKEY);
         }
+        else
+        {
+            source.volume = 1.0f;
+        }
+        source.clip = WallFreezeEndClip;
+        source.Play();
+        Debug.Log("clipStop");
     }
    /* public void setHorizontalWallSpeed(float speed)
     {
