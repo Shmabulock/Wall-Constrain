@@ -9,6 +9,7 @@ public class ObstaclesSpawner : MonoBehaviour
     private int obstaclesCount;
     private Transform[] allObstacles;
     [SerializeField] Transform root;
+    [SerializeField] collectablesSpawner colSpawner;
 
     private void Start()
     {
@@ -109,6 +110,13 @@ public class ObstaclesSpawner : MonoBehaviour
     public int getObstaclesCount()
     {
         return obstaclesCount;
+    }
+    public void spawnNCollectables(Vector3 pos, int N)
+    {
+        for(int i = 0; i < N; i++)
+        {
+            colSpawner.addBonusAtPos(pos);
+        }
     }
 
 }

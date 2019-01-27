@@ -62,6 +62,7 @@ public class Frame : MonoBehaviour {
     [SerializeField] Transform gameOverTrigger;
 
     [SerializeField] wallFreezeBonusSpawner wallFreezeSpawner;
+    [SerializeField] MusicForGameplay music;
 
     private void Awake()
     {
@@ -161,6 +162,7 @@ public class Frame : MonoBehaviour {
         {// for full space bonus;
             if (!isFullSpaceBonusCollected)
             {
+ 
                 leftWallOldPos = m_leftWall.transform.position;
                 rightWallOldPos = m_rightWall.transform.position;
                 upWallOldPos = m_upWall.transform.position;
@@ -169,6 +171,10 @@ public class Frame : MonoBehaviour {
             }
             if (isFullSpaceBonusCollected)
             {
+                if(music.source.isPlaying)
+                {
+                    music.source.Stop();
+                }
                 percent += 0.01f;
                 m_rightWall.transform.position = Vector3.Lerp(rightWallOldPos, rightWallPos, percent);
                 m_leftWall.transform.position = Vector3.Lerp(leftWallOldPos, leftWallPos, percent);
@@ -177,6 +183,10 @@ public class Frame : MonoBehaviour {
             }
             if (percent > 0.9f)
             {
+                if (!music.source.isPlaying)
+                {
+                    music.source.Play();
+                }
                 percent = 0f;
                 isFullSpaceBonusCollected = false;
 

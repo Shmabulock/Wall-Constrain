@@ -143,6 +143,7 @@ MonoBehaviour:
   m_frame: {fileID: 1793527122602540, guid: f1ed5b7adfd771f4ba322321f9de58a1, type: 2}
   gameOverTrigger: {fileID: 164482330}
   wallFreezeSpawner: {fileID: 1182539163}
+  music: {fileID: 606824652}
 --- !u!4 &20232682
 Transform:
   m_ObjectHideFlags: 0
@@ -503,6 +504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicPart1: {fileID: 8300000, guid: c25cbbb227edd9748a54a2516648c8d8, type: 3}
   musicPart2: {fileID: 8300000, guid: 87bb9a3bf7456434bb9c0a44ba5f3c5e, type: 3}
+  source: {fileID: 0}
+  partPlaying: 0
 --- !u!4 &606824653
 Transform:
   m_ObjectHideFlags: 0
@@ -5540,6 +5543,11 @@ Prefab:
       propertyPath: root
       value: 
       objectReference: {fileID: 804043227}
+    - target: {fileID: 114619490585894740, guid: 9f86df1f7e80090459e784755688cd6a,
+        type: 2}
+      propertyPath: colSpawner
+      value: 
+      objectReference: {fileID: 1309300837}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f86df1f7e80090459e784755688cd6a, type: 2}
   m_IsPrefabAsset: 0

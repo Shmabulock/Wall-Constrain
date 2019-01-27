@@ -31,11 +31,11 @@ public class collectablesSpawner : MonoBehaviour
        // Debug.Log(bonusCount);
         if(bonusCount < 1 && (Random.Range(0,1)%2)==0 )
         {
-            addBonus(bonus);
+            addBonus();
         }
         if (bonusCount < 2 && (Random.Range(0, 9) % 10) == 0)
         {
-            addBonus(bonus);
+            addBonus();
         }
     }
     public IEnumerator Spawn(float delay) //SPAWN 
@@ -44,22 +44,30 @@ public class collectablesSpawner : MonoBehaviour
         {
             if(bonusCount < 2)
             {
-                addBonus(bonus);
+                addBonus();
                 continue;
             }
             yield return new WaitForSeconds(delay);
             {
-                addBonus(bonus);
+                addBonus();
             }
         }
     }
-    void addBonus(GameObject bonus)
+    public void addBonus()
     {
         bonusCount++;
         Instantiate(bonus, new Vector2(Random.Range(mainCamera.transform.position.x - mainCamera.orthographicSize,
                                                      mainCamera.transform.position.x + mainCamera.orthographicSize),
                                        Random.Range(mainCamera.transform.position.y - mainCamera.orthographicSize,
                                                      mainCamera.transform.position.y + mainCamera.orthographicSize)), Quaternion.identity, root);
+    }
+    public void addBonusAtPos(Vector3 pos)
+    {
+        bonusCount++;
+        Instantiate(bonus, new Vector2(Random.Range(pos.x - mainCamera.orthographicSize/4,
+                                                     pos.x + mainCamera.orthographicSize/4),
+                                       Random.Range(pos.y - mainCamera.orthographicSize/4,
+                                                     pos.y + mainCamera.orthographicSize/4)), Quaternion.identity, root);
     }
     public void setBonusCount(int Count)
     {

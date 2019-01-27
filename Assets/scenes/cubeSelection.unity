@@ -1789,7 +1789,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Select cube
+  m_Text: Select watcher
 --- !u!222 &2065928145
 CanvasRenderer:
   m_ObjectHideFlags: 0
