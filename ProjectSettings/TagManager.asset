@@ -45,3 +45,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: trail in tutorial
+    uniqueID: 3402710709
+    locked: 0

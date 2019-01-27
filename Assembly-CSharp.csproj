@@ -65,6 +65,10 @@
     <Compile Include="Assets\scrips\animation and scene manage\animatorSetTrigger.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\eventSceneLoad.cs" />
     <Compile Include="Assets\scrips\animation and scene manage\ResetTrigger.cs" />
+    <Compile Include="Assets\scrips\animation and scene manage\SetActiveNonActive.cs" />
+    <Compile Include="Assets\scrips\animation and scene manage\SetTriggerStr.cs" />
+    <Compile Include="Assets\scrips\animation and scene manage\SlidesController.cs" />
+    <Compile Include="Assets\scrips\audio\AudioSourceMusicVolumeController.cs" />
     <Compile Include="Assets\scrips\audio\MusicForGameplay.cs" />
     <Compile Include="Assets\scrips\audio\SoundPlayer.cs" />
     <Compile Include="Assets\scrips\BackgroundScaler.cs" />
@@ -90,6 +94,7 @@
     <Compile Include="Assets\scrips\spawners\fullSpaceBonusSpawner.cs" />
     <Compile Include="Assets\scrips\spawners\ObstaclesSpawner.cs" />
     <Compile Include="Assets\scrips\spawners\wallFreezeBonusSpawner.cs" />
+    <Compile Include="Assets\scrips\Test.cs" />
     <Compile Include="Assets\scrips\timer.cs" />
     <Compile Include="Assets\scrips\triggers\collectableTrigger.cs" />
     <Compile Include="Assets\scrips\triggers\emoteCryingTrigger.cs" />
@@ -98,6 +103,7 @@
     <Compile Include="Assets\scrips\triggers\emoteSadTrigger.cs" />
     <Compile Include="Assets\scrips\triggers\fullSpaceBonusTrigger.cs" />
     <Compile Include="Assets\scrips\triggers\loadSceneTrigger.cs" />
+    <Compile Include="Assets\scrips\triggers\OnCameraEksit.cs" />
     <Compile Include="Assets\scrips\triggers\wallFreezeBonusTrigger.cs" />
     <Compile Include="Assets\scrips\wallMove.cs" />
     <Reference Include="UnityEditor.StandardEvents">
