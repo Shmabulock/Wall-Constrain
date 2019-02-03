@@ -5494,7 +5494,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 804043225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec2c039cd5d3bdb43902fa31090486d1, type: 3}
   m_Name: 
@@ -6578,6 +6578,10 @@ Prefab:
         type: 2}
       propertyPath: orthographic size
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548372859904822, guid: 6287fd0d89845ca46b757592e31e9c5d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6287fd0d89845ca46b757592e31e9c5d, type: 2}
