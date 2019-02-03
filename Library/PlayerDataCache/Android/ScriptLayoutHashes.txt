@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-F:/unity work/builded projects/gameandoid
+F:/unity work/builded projects/WallConstarin 0.98.apk
 SceneListBegin?
 Assets/scenes/mainMenu.unity
 Assets/scenes/tutorial.unity

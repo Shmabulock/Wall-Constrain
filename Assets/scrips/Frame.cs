@@ -78,29 +78,43 @@ public class Frame : MonoBehaviour {
     {
        
 
-        speedX = 0.135f;//9
-        speedY = 0.24f;//16
+        speedY = 0.24f;
+        speedX = speedY / Screen.height * Screen.width;
+
+        // speedX = speedX * 0.9f / X_RATIO;
+        // speedY = speedY * 1.6f / y_ratio;
+
+        // speedY = speedY / 16 * Camera.main.orthographicSize
+
+        //speedX = Screen.width / OPT_SPEED_DIVISOR;
+        //  speedY = Screen.height / OPT_SPEED_DIVISOR;
 
 
-       // speedX = speedX * 0.9f / X_RATIO;
-       // speedY = speedY * 1.6f / y_ratio;
 
-
-        speedX = Screen.width / OPT_SPEED_DIVISOR;
-        speedY = Screen.height / OPT_SPEED_DIVISOR;
-
-
-       
 
         randTime = Random.Range(-1f, 1f);
 
-        Camera.main.orthographicSize = ((float)Screen.width / ((float)Screen.width / (float)Screen.height * 200.0f)) - 0.3f;
+       // Camera.main.orthographicSize = ((float)Screen.width / ((float)Screen.width / (float)Screen.height * 200.0f)) - 0.3f;
 
         x_ratio = Camera.main.orthographicSize/10.0f;
         y_ratio = x_ratio * Screen.height / Screen.width;
 
+
+        //Setting walls positions
+        Vector3 cameraPos = Camera.main.transform.position;
+        cameraPos.z = 0;
+        m_leftWall.transform.position = cameraPos + Vector3.left * 2 * Camera.main.orthographicSize / Screen.height * Screen.width;
+        m_rightWall.transform.position = cameraPos + Vector3.right * 2 * Camera.main.orthographicSize / Screen.height * Screen.width;
+        m_upWall.transform.position = cameraPos + Vector3.up * 2 * Camera.main.orthographicSize;
+        m_downWall.transform.position = cameraPos + Vector3.down * 2 * Camera.main.orthographicSize;
+
+
+
         //  Debug.Log(camera.orthographicSize);
-        Vector2 tmp = new Vector2(Screen.width / WALL_UNSCALED_SIZE, Screen.height / WALL_UNSCALED_SIZE);
+        ////scaling
+        //
+
+        Vector2 tmp = new Vector2(Camera.main.orthographicSize / Screen.height * Screen.width * 4, Camera.main.orthographicSize * 4);
         m_leftWall.transform.localScale = tmp;
         m_rightWall.transform.localScale = tmp;
         m_upWall.transform.localScale = tmp;
@@ -109,12 +123,7 @@ public class Frame : MonoBehaviour {
 
         // m_leftWall.transform.position = Vector3.one* Camera.main.orthographicSize;
 
-        Vector2 cameraPos = Camera.main.transform.position;
-        m_leftWall.transform.position = cameraPos + Vector3.left * tmp/2;
        
-        m_rightWall.transform.position = cameraPos + Vector3.right * tmp / 2;
-        m_upWall.transform.position = cameraPos + Vector3.up * tmp / 2;
-        m_downWall.transform.position = cameraPos + Vector3.down * tmp / 2;
 
         leftWallPos = m_leftWall.transform.position;
         rightWallPos = m_rightWall.transform.position;
@@ -181,7 +190,7 @@ public class Frame : MonoBehaviour {
                 m_upWall.transform.position = Vector3.Lerp(upWallOldPos, upWallPos, percent);
                 m_downWall.transform.position = Vector3.Lerp(downWallOldPos, downWallPos, percent);
             }
-            if (percent > 0.9f)
+            if (percent > 1.0f)
             {
                 if (!music.source.isPlaying)
                 {
